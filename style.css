@@ -427,7 +427,8 @@ body {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  padding: 0 10px;
+  padding: 0 12px;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   flex-shrink: 0;
@@ -459,6 +460,8 @@ body {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  padding: 0 12px;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -481,3 +484,53 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* inspo section */
+.inspo-sect {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  font-size: 30px;
+  color: white;
+  background-color: black;
+  padding-left: 40px;
+  padding-right: 100px;
+  gap: 30px;
+  padding-top: 30px;
+}
+
+.inspo-col {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0;
+  flex-direction: column;
+  line-height: 1.5;
+  font-size: 24px;
+  justify-content: center;
+}
+
+.inspo-list {
+  list-style: none;
+  line-height: 2;
+}
+
+.inspo-comp {
+  background-color: rgb(78, 22, 75);
+  border-radius: 15px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0 14px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  align-self: center;
+  margin-top: 30px;
+}
+
