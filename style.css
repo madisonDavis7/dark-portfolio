@@ -534,3 +534,39 @@ body {
   margin-top: 30px;
 }
 
+/* apps section */
+.apps-sect {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  font-size: 30px;
+  color: white;
+  background-color: black;
+  padding-left: 40px;
+  padding-right: 100px;
+  gap: 30px;
+  padding-top: 30px;
+}
+
+/* designs section */
+.design-sect {
+    min-height: 100vh;
+  width: 100%;
+  display: flex;
+  font-size: 30px;
+  color: white;
+  background-color: black;
+  padding-left: 40px;
+  padding-right: 100px;
+  gap: 30px;
+  padding-top: 30px;
+  background-color:hsla(0,0%,0%,1);
+  background-image:
+    radial-gradient(at 1% 0%, hsla(92,0%,0%,1) 0px, transparent 50%),
+    radial-gradient(at 40% 20%, hsla(26,0%,0%,1) 0px, transparent 50%),
+    radial-gradient(at 97% 68%, hsla(277,94%,7%,1) 0px, transparent 50%),
+    radial-gradient(at 0% 93%, hsla(270,89%,25%,1) 0px, transparent 50%),
+    radial-gradient(at 67% 95%, hsla(285,81%,66%,1) 0px, transparent 50%),
+    radial-gradient(at 5% 44%, hsla(300,91%,23%,1) 0px, transparent 50%);
+}
+
