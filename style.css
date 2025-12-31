@@ -32,12 +32,22 @@ body {
   font-size: 20px;
   color: rgb(255, 255, 255);
   min-width: 0;
+  text-decoration: none;
 }
 
+.taskbar-left:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.taskbar-right:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 .taskbar-right {
   justify-self: end;
   font-size: 20px;
   color: rgb(255, 255, 255);
+  text-decoration: none;
 }
 
 .taskbar-center {
@@ -45,6 +55,7 @@ body {
   text-align: center;
   font-size: 25px;
   color: rgb(255, 255, 255);
+  text-decoration: none;
 }
 
 /* hero section */
