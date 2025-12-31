@@ -21,7 +21,7 @@
       <div class="txt3">UI/UX Designer</div>
     </h1>
   </div>
-  <div class="about-sect">
+  <div class="about-sect scroll-fade">
     <div class="grid">
       <div class="box a">Hi! I am an undergrad student majoring in cs with a focus in software engineering. I've always
         known I wanted to work in tech</div>
@@ -43,7 +43,7 @@
       <div class="box i">This is where i can say im passinate about what I do </div>
     </div>
   </div>
-  <div class="skills-sect">
+  <div class="skills-sect scroll-fade">
     <h2 class="title-txt-skills">Skills</h2>
     <div class="progress-bars">
 
@@ -120,7 +120,7 @@
       </div>
     </div>
   </div>
-  <div class="jobs-sect">
+  <div class="jobs-sect scroll-fade">
     <h2 class="title-txt-skills">Experience</h2>
     <div class="carousel">
       <div class="carousel-track">
@@ -230,7 +230,7 @@
       </div>
     </div>
   </div>
-  <div class="inspo-sect">
+  <div class="inspo-sect scroll-fade">
     <div class="inspo-col left">
       <div class="rotating-circle">
         <div class="rotating-circle-two"></div>
@@ -256,7 +256,7 @@
       </ul>
     </div>
   </div>
-  <div class="apps-sect">
+  <div class="apps-sect scroll-fade">
     <h2 class="title-txt-apps">Web Apps and Projects</h2>
     <div class="container-apps">
       <div>
@@ -276,7 +276,7 @@
       </div>
     </div>
   </div>
-  <div class="design-sect">
+  <div class="design-sect scroll-fade">
     <h2 class="title-txt-design">Websites, Designs and Prototypes</h2>
     <div class="container-apps-des">
       <div>
@@ -351,6 +351,16 @@
 
   cards.forEach(card => card.addEventListener('click', handleClick));
   applyClasses();
+
+  //for fade om animations 
+  const els = document.querySelectorAll('.scroll-fade');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.2 });
+
+  els.forEach(el => observer.observe(el));
 </script>
 
 </html>
