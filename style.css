@@ -64,7 +64,7 @@ body {
   align-items: center;
   background-blend-mode: screen;
   padding-left: 70px;
-
+  padding-top: 10vh;
   background-color: hsla(0, 0%, 0%, 1);
   background-image:
     radial-gradient(at 40% 20%, hsla(24, 0%, 0%, 1) 0px, transparent 50%),
@@ -542,18 +542,21 @@ body {
 
 /* apps section */
 .apps-sect {
-  min-height: 100vh;
+  min-height: 90vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   font-size: 30px;
-  gap: 50px;
   color: white;
   background-color: black;
   padding-left: 40px;
   padding-right: 100px;
   box-sizing: border-box;
   place-items: center;
+}
+
+.title-txt-apps {
+  margin-bottom: 50px;
 }
 
 .container-apps {
@@ -573,19 +576,15 @@ body {
     overflow: hidden;
 
     &:nth-of-type(1) {
-      background: url("https://images.pexels.com/photos/1845208/pexels-photo-1845208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat 50% / cover;
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/rubiks-img.jpg") no-repeat 50% / cover;
     }
 
     &:nth-of-type(2) {
-      background: url("https://images.pexels.com/photos/36469/woman-person-flowers-wreaths.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat 50% / cover;
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/go-img.jpg") no-repeat 50% / cover;
     }
 
     &:nth-of-type(3) {
-      background: url("https://images.pexels.com/photos/1468379/pexels-photo-1468379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat 50% / cover;
-    }
-
-    &:nth-of-type(4) {
-      background: url("https://images.pexels.com/photos/247322/pexels-photo-247322.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat 50% / cover;
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/celestia-img.png") no-repeat 50% / cover;
     }
 
     .content {
@@ -623,15 +622,19 @@ body {
 
 /* designs section */
 .design-sect {
-  min-height: 100vh;
+  min-height: 90vh;
   width: 100%;
   font-size: 30px;
   color: white;
   background-color: black;
   padding-left: 40px;
   padding-right: 100px;
-  gap: 30px;
   padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
   background-color: hsla(0, 0%, 0%, 1);
   background-image:
     radial-gradient(at 1% 0%, hsla(92, 0%, 0%, 1) 0px, transparent 50%),
@@ -640,4 +643,77 @@ body {
     radial-gradient(at 0% 93%, hsla(270, 89%, 25%, 1) 0px, transparent 50%),
     radial-gradient(at 67% 95%, hsla(285, 81%, 66%, 1) 0px, transparent 50%),
     radial-gradient(at 5% 44%, hsla(300, 91%, 23%, 1) 0px, transparent 50%);
+}
+
+.title-txt-design {
+  margin-bottom: 50px;
+}
+
+.container-apps-des {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  gap: 10px;
+
+  >div {
+    flex: 0 0 300px;
+    border-radius: 0.5rem;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    box-shadow: 1px 5px 15px #1e0e3e;
+    position: relative;
+    overflow: hidden;
+
+    &:nth-of-type(1) {
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/greengrid-img.png") no-repeat 50% / cover;
+    }
+
+    &:nth-of-type(2) {
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/pulse-img.png") no-repeat 50% / cover;
+    }
+
+    &:nth-of-type(3) {
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/goodbakery-img.jpg") no-repeat 50% / cover;
+    }
+
+    &:nth-of-type(4) {
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/scoop-img.jpg") no-repeat 50% / cover;
+    }
+
+    &:nth-of-type(5) {
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/michi-img.webp") no-repeat 50% / cover;
+    }
+
+    .content-des {
+      font-size: 1.5rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      opacity: 0;
+      flex-direction: column;
+      height: 100%;
+      justify-content: flex-end;
+      background: rgb(2, 2, 46);
+      background: linear-gradient(0deg,
+          rgba(2, 2, 46, 0.6755077030812324) 0%,
+          rgba(255, 255, 255, 0) 100%);
+      transform: translatey(100%);
+      transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+      visibility: hidden;
+    }
+
+    &:hover {
+      flex: 0 0 400px;
+      box-shadow: 1px 3px 15px #7645d8;
+      transform: translatey(-30px);
+    }
+
+    &:hover .content-des {
+      opacity: 1;
+      transform: translatey(0%);
+      visibility: visible;
+    }
+  }
 }
