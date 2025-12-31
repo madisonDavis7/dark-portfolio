@@ -732,3 +732,29 @@ body {
     }
   }
 }
+
+/* footer content */
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+.footer-cont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: clamp(1rem, 1.5vw, 4rem);
+  color: white;
+}
+
+.personal-logo {
+  width: 6vw;
+  height: auto;
+  padding-right: 1rem;
+}
