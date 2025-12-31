@@ -137,8 +137,7 @@ body {
   height: 100%;
   grid-gap: 0;
   color: #fff;
-  background-color: black;
-  padding-top: 10vh;
+    padding-top: 10vh;
 }
 
 .box {
