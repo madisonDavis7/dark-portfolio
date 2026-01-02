@@ -61,7 +61,7 @@ body {
 /* main app section */
 /* add animation here for the gradient background */
 .main-app-sect {
-    height: 140vh;
+    height: 220vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -148,4 +148,84 @@ body {
     color: white;
     background-color: #530379;
 
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    width: 90vw;
+    height: 80vh;
+    margin-top: 10vh;
+}
+    
+.div1 {
+    grid-row: span 3 / span 3;
+    border: blue solid 2px;
+}
+
+.div2 {
+    grid-column: span 2 / span 2;
+}
+
+.div3 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+.div4 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+
+.div3-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.div4-title {
+  font-size: 36px;
+  text-align: center;
+}
+
+.div4-list {
+  font-size: 20px;
+  text-align: left;
+  line-height: 2;
+}
+
+.div2-para {
+  font-size: 20px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* footer content */
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.footer-cont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: clamp(1rem, 1.5vw, 4rem);
+  color: white;
+}
+
+.personal-logo {
+  width: 6vw;
+  height: auto;
+  padding-right: 1rem;
 }
