@@ -4,8 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game of Go Page</title>
+    <link rel="stylesheet" href="../apps-styles.css" />
 </head>
 <body>
-    
+    <div class="taskbar-main">
+        <a class="taskbar-left" href="../contact.html">Contact</a>
+        <a class="taskbar-center" href="../index.html">Madison Davis</a>
+        <a class="taskbar-right" href="../blogs.html">Blogs</a>
+  </div>
+  <div class="main-app-sect">
+    <h2 class="app-title">A Game of Go Page</h2>
+    <div class="app-content">
+      <div class="app-col">
+        <div class="cube-grid">
+          <div class="cube-cell">Java</div>
+          <div class="cube-cell"></div>
+          <div class="cube-cell">Terminal Output</div>
+          <div class="cube-cell"></div>
+          <div class="cube-cell">
+            <div class="rotating-circle"></div>
+          </div>
+          <div class="cube-cell"></div>
+          <div class="cube-cell"></div>
+          <div class="cube-cell"></div>
+          <div class="cube-cell">Game Research</div>
+        </div>
+      </div>
+      <div class="app-col">
+        <p>Thi was the second project I completed in my intermediate Java class. In addition to still learning Java, I also had to learn the rules of Go, and there were 
+            many. it's a fairly complicated game and took a lot of planning and revising to get the logic down correctly. This was a terminal based app so I needed to 
+            figure out a way to clearly display the board, whos turn it was, pieces captured, and available spots on the board. 
+        </p>
+        <p>
+            To make this game I used a lot of lits and strings. These came in very handy for keeping track of the player, moves, pieces on each side, and the board itself. 
+            Because there are so many rules I also used many conditional statements to ensure players were only making legal moves. 
+        </p>
+      </div>
+    </div>
+    <div class="parent">
+      <div class="div1">1</div>
+      <div class="div2">
+        <div class="div2-img">
+            <img src="../images/go-2.png" class="div2-img" />
+        </div>
+      </div>
+      <div class="div3">
+        <img src="../images/go-3.jpg" class="div3-img" />
+      </div>
+      <div class="div4">
+        <p class="div4-title">Instructions to Run:</p>
+        <ol class="div4-list">
+          <li>Install Docker Desktop and ensure it is running</li>
+          <li>Open Terminal and run: <i>docker login</i></li>
+          <li>run: <i>docker pull madison72/go-board-app:latest</i></li>
+          <li>run: <i>docker run -it madison72/go-board-app:latest</i></li>
+        </ol>
+      </div>
+    </div>
+      <footer>
+     <div class="footer-cont">
+        <img src="../images/personal-logo.svg" alt="personal logo" class="personal-logo">
+        <p>Designed by Madison Davis</p>
+    </div>
+  </footer>
+  </div>
 </body>
 </html>
