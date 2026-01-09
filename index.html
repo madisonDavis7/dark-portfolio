@@ -278,48 +278,125 @@
   </div>
   <div class="design-sect scroll-fade">
     <h2 class="title-txt-design">Websites, Designs and Prototypes</h2>
-    <div class="container-apps-des">
-      <div>
-        <div class="content-des">
-          <h2>GreenGrid</h2>
-          <p>Website</p>
+    <div class="carousel-wrapper-des">
+      <button class="carousel-arrow carousel-prev-des" aria-label="Previous slide">❮</button>
+      <div class="carousel-viewport-des">
+        <div class="container-apps-des">
+          <div>
+            <div class="content-des">
+              <h2>GreenGrid</h2>
+              <p>Website</p>
+            </div>
+          </div>
+          <div>
+            <div class="content-des">
+              <h2>Pulse</h2>
+              <p>Website</p>
+            </div>
+          </div>
+          <div>
+            <div class="content-des">
+              <h2>The Good Bakery</h2>
+              <p>Website Design</p>
+            </div>
+          </div>
+          <div>
+            <div class="content-des">
+              <h2>Scoop & Joy</h2>
+              <p>Website Design </p>
+            </div>
+          </div>
+          <div>
+            <div class="content-des">
+              <h2>Michi Ramen</h2>
+              <p>Website Redesign</p>
+            </div>
+          </div>
+          <div>
+            <div class="content-des">
+              <h2>KiKi's Delivery Service</h2>
+              <p>Poster Design</p>
+            </div>
+          </div>
+          <div>
+            <div class="content-des">
+              <h2>Spirits Bath House</h2>
+              <p>Poster Design</p>
+            </div>
+          </div>
+          <div>
+            <div class="content-des">
+              <h2>Howl's Moving Company</h2>
+              <p>Poster Design</p>
+            </div>
+          </div>
+          <div>
+            <div class="content-des">
+              <h2>Ponyo Shipping Company</h2>
+              <p>Poster Design</p>
+            </div>
+          </div>
+          <div>
+            <div class="content-des">
+              <h2>Laputa</h2>
+              <p>Poster Design</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div>
-        <div class="content-des">
-          <h2>Pulse</h2>
-          <p>Website</p>
-        </div>
-      </div>
-      <div>
-        <div class="content-des">
-          <h2>The Good Bakery</h2>
-          <p>Website Design</p>
-        </div>
-      </div>
-      <div>
-        <div class="content-des">
-          <h2>Scoop & Joy</h2>
-          <p>Website Design </p>
-        </div>
-      </div>
-      <div>
-        <div class="content-des">
-          <h2>Michi Ramen</h2>
-          <p>Website Redesign</p>
-        </div>
-      </div>
+      <button class="carousel-arrow carousel-next-des" aria-label="Next slide">❯</button>
     </div>
     <footer>
-     <div class="footer-cont">
+      <div class="footer-cont">
         <img src="images/personal-logo.svg" alt="personal logo" class="personal-logo">
         <p>Designed by Madison Davis</p>
-    </div>
-  </footer>
+      </div>
+    </footer>
   </div>
 </body>
 
 <script>
+  // Design carousel functionality
+  const containerDes = document.querySelector('.container-apps-des');
+  const designCards = Array.from(document.querySelectorAll('.container-apps-des > div'));
+  const prevBtnDes = document.querySelector('.carousel-prev-des');
+  const nextBtnDes = document.querySelector('.carousel-next-des');
+
+  let currentScrollDes = 0;
+  const cardWidth = 300; // card width
+  const cardGap = 10; // gap between cards
+  const cardsPerView = 3; // visible cards at once
+  const totalCards = designCards.length;
+  const maxScroll = Math.max(0, (totalCards - cardsPerView));
+
+  function updateCarouselDes() {
+    const translateValue = -(currentScrollDes * (cardWidth + cardGap));
+    containerDes.style.left = `${translateValue}px`;
+
+    // Hide/show arrows based on position
+    prevBtnDes.style.opacity = currentScrollDes === 0 ? '0.3' : '1';
+    prevBtnDes.style.pointerEvents = currentScrollDes === 0 ? 'none' : 'auto';
+
+    nextBtnDes.style.opacity = currentScrollDes >= maxScroll ? '0.3' : '1';
+    nextBtnDes.style.pointerEvents = currentScrollDes >= maxScroll ? 'none' : 'auto';
+  }
+
+  prevBtnDes.addEventListener('click', () => {
+    if (currentScrollDes > 0) {
+      currentScrollDes--;
+      updateCarouselDes();
+    }
+  });
+
+  nextBtnDes.addEventListener('click', () => {
+    if (currentScrollDes < maxScroll) {
+      currentScrollDes++;
+      updateCarouselDes();
+    }
+  });
+
+  updateCarouselDes();
+
   const track = document.querySelector('.carousel-track');
   const cards = Array.from(document.querySelectorAll('.job-card'));
   let current = 0;

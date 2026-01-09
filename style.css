@@ -24,7 +24,7 @@ body {
 
 /* task bar stuff */
 .taskbar-main {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -36,7 +36,7 @@ body {
   padding: 0 20px;
   gap: 12px;
   overflow: hidden;
-  background: transparent;
+  background-color: black;
   z-index: 100;
 }
 
@@ -48,14 +48,16 @@ body {
   text-decoration: none;
 }
 
-.taskbar-left:hover{
+.taskbar-left:hover {
   text-decoration: underline;
   cursor: pointer;
 }
+
 .taskbar-right:hover {
   text-decoration: underline;
   cursor: pointer;
 }
+
 .taskbar-right {
   justify-self: end;
   font-size: 20px;
@@ -87,13 +89,15 @@ body {
 }
 
 .hero-sect {
-  height: 100vh;
+  min-height: 90vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   background-blend-mode: screen;
   padding-left: 70px;
   padding-top: 10vh;
+  padding-bottom: 20px;
+  margin-top: 10vh;
   background-color: hsla(0, 0%, 0%, 1);
   background-image:
     radial-gradient(at 40% 20%, hsla(24, 0%, 0%, 1) 0px, transparent 50%),
@@ -118,12 +122,12 @@ body {
 
 /* about section */
 .about-sect {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 40px;
+  padding: 40px;
   font-size: 20px;
   color: white;
   background-color: black;
@@ -137,7 +141,7 @@ body {
   height: 100%;
   grid-gap: 0;
   color: #fff;
-    padding-top: 10vh;
+  padding-top: 10vh;
 }
 
 .box {
@@ -237,17 +241,20 @@ body {
 }
 
 .progress-bars {
-  width: 70vw;
+  width: 90%;
+  max-width: 1100px;
   height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(3, auto);
   gap: 50px;
+  margin: 0 auto;
 }
 
 .container {
   margin: 0 auto;
-  width: 500px;
+  width: 100%;
+  max-width: 450px;
   text-align: center;
 }
 
@@ -351,6 +358,8 @@ body {
   justify-content: center;
   align-items: center;
   gap: 40px;
+  padding: 60px 20px;
+  margin-bottom: 50px;
   font-size: 40px;
   color: white;
   background-color: hsla(0, 0%, 0%, 1);
@@ -362,7 +371,6 @@ body {
     radial-gradient(at 18% 50%, hsla(278, 68%, 43%, 1) 0px, transparent 50%);
   background-size: 200% 100%;
   animation: waveMove 8s ease-in-out infinite;
-
 }
 
 .carousel {
@@ -687,12 +695,31 @@ body {
   margin-bottom: 50px;
 }
 
-.container-apps-des {
+.carousel-wrapper-des {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.carousel-viewport-des {
+  width: calc(300px * 5 + 10px * 4);
   height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+.container-apps-des {
+  width: calc(300px * 6 + 10px * 5);
+  height: 500px;
+  display: flex;
   gap: 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: left 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
   >div {
     flex: 0 0 300px;
@@ -723,6 +750,14 @@ body {
       background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/michi-img.webp") no-repeat 50% / cover;
     }
 
+    &:nth-of-type(6) {
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/kikis-poster.png") no-repeat 50% / cover;
+    }
+
+    &:nth-of-type(7) {
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/spirited-poster.png") no-repeat 50% / cover;
+    }
+
     .content-des {
       font-size: 1.5rem;
       color: #fff;
@@ -743,7 +778,6 @@ body {
     }
 
     &:hover {
-      flex: 0 0 400px;
       box-shadow: 1px 3px 15px #7645d8;
       transform: translatey(-30px);
     }
@@ -754,6 +788,34 @@ body {
       visibility: visible;
     }
   }
+}
+
+.carousel-arrow {
+  background: rgba(134, 127, 134, 0.79);
+  border: 1px solid rgba(134, 127, 134, 0.31);
+  color: #f7eaff;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-arrow:hover {
+  background: rgba(163, 95, 245, 0.3);
+  border-color: #a35ff5;
+  box-shadow: 0 0 20px rgba(163, 95, 245, 0.5);
+  transform: scale(1.1);
+}
+
+.carousel-arrow:active {
+  transform: scale(0.95);
 }
 
 /* footer content */
@@ -802,12 +864,12 @@ footer {
   justify-content: flex-start;
   align-items: center;
   gap: 24px;
-  background-color:hsla(0,0%,0%,1);
+  background-color: hsla(0, 0%, 0%, 1);
   background-image:
     radial-gradient(at 0% 18%, hsla(283, 81%, 51%, 0.7) 0px, transparent 50%),
-    radial-gradient(at 91% 53%, hsla(283,83%,46%,0.46) 0px, transparent 50%),
-    radial-gradient(at 7% 92%, hsla(285,83%,34%,0.57) 0px, transparent 50%),
-    radial-gradient(at 83% 100%, hsla(289,90%,51%,0.42) 0px, transparent 50%),
+    radial-gradient(at 91% 53%, hsla(283, 83%, 46%, 0.46) 0px, transparent 50%),
+    radial-gradient(at 7% 92%, hsla(285, 83%, 34%, 0.57) 0px, transparent 50%),
+    radial-gradient(at 83% 100%, hsla(289, 90%, 51%, 0.42) 0px, transparent 50%),
     radial-gradient(at 43% 100%, rgb(120, 10, 184) 0px, transparent 50%);
   background-size: 220% 220%;
   background-repeat: no-repeat;
