@@ -23,24 +23,18 @@
   </div>
   <div class="about-sect scroll-fade">
     <div class="grid">
-      <div class="box a">Hi! I am an undergrad student majoring in cs with a focus in software engineering. I've always
-        known I wanted to work in tech</div>
-      <div class="box b"></div>
-      <div class="box c">This is where I talk about my resume
-        <button class="resume-btn"></button>
-      </div>
-      <div class="box d"></div>
-      <div class="box e">
+      <div class="div1">Hi! I am an undergrad student at the University of Montana majoring in computer science with an emphasis 
+        in software engineering</div>
+      <div class="div2">I worked in tech support for a few years before moving to my current software delopment internship. </div>
+      <div class="div3">About a year ago I was introducded into web design and UI/UX. I fell in love with the creativity aspect and started focusing more on design work. Doing so has
+        made me want to pursue a career in UI/UX design and continue practicing my skills. </div>
+      <div class="div4">In my free time I enjoy reading, designing, running. I often find inspiration and motivation in the books I read and this helps me grow personally and 
+        keep an open mind. </div>
+      <div class="div5">
         <div class="rotating-circle">
           <div class="rotating-circle-two"></div>
         </div>
-
       </div>
-      <div class="box f"></div>
-      <div class="box g">About a year ago I was introducded into web design and focusing more ont eh creative part fell
-        in love</div>
-      <div class="box h"></div>
-      <div class="box i">This is where i can say im passinate about what I do </div>
     </div>
   </div>
   <div class="skills-sect scroll-fade">
@@ -282,61 +276,61 @@
       <button class="carousel-arrow carousel-prev-des" aria-label="Previous slide">❮</button>
       <div class="carousel-viewport-des">
         <div class="container-apps-des">
-          <div>
+          <div class="poster-card" data-design="greengrid">
             <div class="content-des">
               <h2>GreenGrid</h2>
               <p>Website</p>
             </div>
           </div>
-          <div>
+          <div class="poster-card" data-design="pulse">
             <div class="content-des">
               <h2>Pulse</h2>
               <p>Website</p>
             </div>
           </div>
-          <div>
+          <div class="poster-card" data-design="bakery">
             <div class="content-des">
               <h2>The Good Bakery</h2>
               <p>Website Design</p>
             </div>
           </div>
-          <div>
+          <div class="poster-card" data-design="scoop">
             <div class="content-des">
               <h2>Scoop & Joy</h2>
               <p>Website Design </p>
             </div>
           </div>
-          <div>
+          <div class="poster-card" data-design="michi">
             <div class="content-des">
               <h2>Michi Ramen</h2>
               <p>Website Redesign</p>
             </div>
           </div>
-          <div>
+          <div class="poster-card" data-design="kiki">
             <div class="content-des">
               <h2>KiKi's Delivery Service</h2>
               <p>Poster Design</p>
             </div>
           </div>
-          <div>
+          <div class="poster-card" data-design="spirits">
             <div class="content-des">
               <h2>Spirits Bath House</h2>
               <p>Poster Design</p>
             </div>
           </div>
-          <div>
+          <div class="poster-card" data-design="howl">
             <div class="content-des">
               <h2>Howl's Moving Company</h2>
               <p>Poster Design</p>
             </div>
           </div>
-          <div>
+          <div class="poster-card" data-design="ponyo">
             <div class="content-des">
               <h2>Ponyo Shipping Company</h2>
               <p>Poster Design</p>
             </div>
           </div>
-          <div>
+          <div class="poster-card" data-design="laputa">
             <div class="content-des">
               <h2>Laputa</h2>
               <p>Poster Design</p>
@@ -345,6 +339,17 @@
         </div>
       </div>
       <button class="carousel-arrow carousel-next-des" aria-label="Next slide">❯</button>
+    </div>
+    <!-- Modal Popup -->
+    <div id="designModal" class="modal">
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <div class="modal-body">
+          <h2 id="modalTitle">Design Title</h2>
+          <p id="modalDescription">Design description goes here.</p>
+          <div id="modalImages"></div>
+        </div>
+      </div>
     </div>
     <footer>
       <div class="footer-cont">
@@ -438,6 +443,109 @@
   }, { threshold: 0.2 });
 
   els.forEach(el => observer.observe(el));
+
+  // Modal functionality
+  const modal = document.getElementById('designModal');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalDescription = document.getElementById('modalDescription');
+  const modalImages = document.getElementById('modalImages');
+  const modalClose = document.querySelector('.modal-close');
+
+  const designData = {
+    kiki: {
+      title: "KiKi's Delivery Service",
+      description: "Poster design inspired by KiKi's Delivery Service.",
+      images: ['images/kikis-poster.png']
+    },
+    spirits: {
+      title: 'Spirits Bath House',
+      description: 'Spirited Away themed poster for a bath house',
+      images: ['images/spirited-poster.png']
+    },
+    howl: {
+      title: "Howl's Moving Company",
+      description: "Poster for a moving company inspired by Howl's Moving Castle.",
+      images: ['images/howl-poster.png']
+    },
+    ponyo: {
+      title: 'Ponyo Shipping Company',
+      description: 'Ponyo inspired poster for a shipping company. ',
+      images: ['images/ponyo-poster.png']
+    },
+    laputa: {
+      title: 'Laputa',
+      description: 'Castle in the Sky inspired poster for a jewelry business.',
+      images: ['images/laputa-poster.png']
+    }
+  };
+
+  // Add click event to all design cards
+  document.querySelectorAll('.poster-card').forEach(card => {
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const designId = card.getAttribute('data-design');
+      const data = designData[designId];
+
+      if (data) {
+        modalTitle.textContent = data.title;
+        modalDescription.textContent = data.description;
+
+        // Clear and add images
+        modalImages.innerHTML = '';
+        data.images.forEach(imgSrc => {
+          const img = document.createElement('img');
+          img.src = imgSrc;
+          img.alt = data.title;
+          img.onerror = () => {
+            img.src = 'images/placeholder.jpg';
+          };
+          modalImages.appendChild(img);
+        });
+
+        // Small delay to prevent immediate close
+        setTimeout(() => {
+          modal.style.display = 'block';
+          modal.scrollTop = 0; // Scroll modal to top
+          document.body.style.overflow = 'hidden';
+        }, 10);
+      }
+    });
+  });
+
+  // Close modal function
+  function closeModal() {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  // Close button
+  modalClose.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    closeModal();
+  });
+
+  // Click outside modal to close
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Prevent clicks inside modal content from closing
+  document.querySelector('.modal-content').addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
+  // ESC key to close
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'flex') {
+      closeModal();
+    }
+  });
 </script>
 
 </html>

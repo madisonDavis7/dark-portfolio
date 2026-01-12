@@ -135,29 +135,30 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: 1.5fr 2fr 1.5fr;
-  grid-template-rows: 1.5fr 5fr 1.5fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 8px;
   width: 100%;
   height: 100%;
-  grid-gap: 0;
+  grid-gap: 10px;
   color: #fff;
-  padding-top: 10vh;
-}
-
-.box {
-  color: #fff;
-  padding: 15px;
-  font-size: 150%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-top: 5vh;
+  font-size: 24px;
   text-align: center;
+  border: solid red 2px;
+  padding-bottom: 7vh;
 }
 
-/* box c */
-.box.c {
+.div2 {
+  display: flex;
   flex-direction: column;
-  gap: 12px;
+
+}
+.div5 {
+    grid-column: span 4 / span 4;
+    grid-row: span 2 / span 2;
+    align-items: center;
+    justify-self: center;
 }
 
 .resume-btn {
@@ -169,13 +170,6 @@ body {
   background-color: pink;
   border: none;
   border-radius: 10px;
-}
-
-/* center box */
-.box.e {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .rotating-circle {
@@ -238,6 +232,7 @@ body {
   font-size: 30px;
   color: white;
   background-color: black;
+  border: solid blue 2px;
 }
 
 .progress-bars {
@@ -758,6 +753,22 @@ body {
       background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/spirited-poster.png") no-repeat 50% / cover;
     }
 
+    &:nth-of-type(8) {
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/howl-poster.png") no-repeat 50% / cover;
+    }
+
+    &:nth-of-type(9) {
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/ponyo-poster.png") no-repeat 50% / cover;
+    }
+
+    &:nth-of-type(10) {
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/laputa-poster.png") no-repeat 50% / cover;
+    }
+
+    &:nth-of-type(11) {
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/totoro-poster.png") no-repeat 50% / cover;
+    }
+
     .content-des {
       font-size: 1.5rem;
       color: #fff;
@@ -966,4 +977,117 @@ footer {
 .submit-btn:active {
   transform: translateY(0);
   filter: brightness(0.95);
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.modal-content {
+  background: linear-gradient(135deg, rgba(30, 0, 50, 0.95), rgba(10, 0, 30, 0.95));
+  border: 2px solid rgba(163, 95, 245, 0.3);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 900px;
+  width: 90%;
+  margin: 40px auto;
+  min-height: 50vh;
+  height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(163, 95, 245, 0.3);
+  animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: #a35ff5;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.2s;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: #d3afff;
+  transform: rotate(90deg);
+}
+
+.modal-body h2 {
+  color: #a35ff5;
+  font-size: 36px;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.modal-body p {
+  color: #f7eaff;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+#modalImages {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#modalImages img {
+  width: 100%;
+  border-radius: 12px;
+  border: 2px solid rgba(163, 95, 245, 0.2);
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+#modalImages img:hover {
+  transform: scale(1.02);
+  border-color: rgba(163, 95, 245, 0.5);
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: rgba(30, 0, 50, 0.5);
+  border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #a35ff5;
+  border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #d3afff;
 }
