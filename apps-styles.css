@@ -61,7 +61,6 @@ body {
 /* main app section */
 /* add animation here for the gradient background */
 .main-app-sect {
-    height: 220vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -97,8 +96,14 @@ body {
     text-align: center;
     flex-direction: column;
     line-height: 1.5;
-    font-size: 24px;
+    font-size: 22px;
     justify-content: center;
+}
+
+.col-para {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 .cube-grid {
@@ -179,14 +184,14 @@ body {
 }
 
 .div2-para {
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 15px;
   line-height: 1.5;
 }
 .div2-list {
   display: flex;
   gap: 20px; 
-  font-size: 20px;
+  font-size: 22px;
   line-height: 2;
 }
 .list-col {
@@ -225,13 +230,13 @@ body {
 }
 
 
-
 /* footer content */
 footer {
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem 0;
   margin-top: 3rem;
 }
 
@@ -243,10 +248,33 @@ footer {
   gap: 12px;
   font-size: clamp(1rem, 1.5vw, 4rem);
   color: white;
+  width: 100%;
 }
 
 .personal-logo {
   width: 6vw;
   height: auto;
   padding-right: 1rem;
+}
+
+.linkedin-btn {
+  margin-right: auto;
+  color: inherit;
+  transition: color 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.linkedin-btn:hover {
+  color: #a35ff5;
+  transform: scale(1.1);
+}
+
+.git-btn {
+  margin-left: auto;
+  color: inherit;
+  transition: color 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.git-btn:hover {
+  color: #a35ff5;
+  transform: scale(1.1);
 }
