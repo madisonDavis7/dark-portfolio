@@ -147,7 +147,7 @@ body {
   font-size: 24px;
   text-align: center;
   padding-bottom: 7vh;
-  
+
 }
 
 .div2 {
@@ -297,7 +297,7 @@ body {
 
 @keyframes progressAnimation {
   0% {
-    width: 5%;
+    width: 10%;
     background-color: #d3afff;
   }
 
@@ -307,22 +307,14 @@ body {
   }
 }
 
-/*<div class="progress-oscillate" style="--osc-target: 40%;"> */
-.progress-oscillate {
-  --osc-target: 70%;
-  /* change this per bar to control how far it goes */
-  --osc-speed: 5s;
-  /* optional: change speed */
-}
-
 .progress-oscillate .progress-bar2 {
-  width: 5%;
+  width: 10%;
   animation: progressOscillate var(--osc-speed) ease-in-out infinite;
 }
 
 @keyframes progressOscillate {
   0% {
-    width: 5%;
+    width: 10%;
     background-color: #d3afff;
   }
 
@@ -332,7 +324,7 @@ body {
   }
 
   100% {
-    width: 5%;
+    width: 10%;
     background-color: #d3afff;
   }
 }
@@ -515,6 +507,7 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
+  justify-content: center;
   flex-shrink: 0;
 
 }
@@ -525,6 +518,7 @@ body {
   line-height: 1.5;
   margin: 0;
   padding: 0;
+  
 }
 
 /* inspo section */
