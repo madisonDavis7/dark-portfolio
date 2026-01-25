@@ -146,16 +146,25 @@ body {
 }
 
 .figma-btn {
-    width: 10vw;
+    min-width: 10vw;
     font-size: 20px;
     border-radius: 30px;
-    padding: 5px;
+    padding: 10px;
     color: white;
     background-color: #a92be4;
     overflow: hidden;
-    text-overflow: ellipsis;
     white-space: nowrap;
     align-self: center;
+    border: none;
+    box-shadow: 5px 5px rgb(52, 50, 50);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.figma-btn:hover {
+  color: #a92be4;
+  background-color: white;
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .parent {

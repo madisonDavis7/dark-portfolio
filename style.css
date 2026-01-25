@@ -166,16 +166,25 @@ body {
 }
 
 .resume-btn {
-  height: 30px;
-  width: 120px;
-  text-align: center;
-  font-size: 18px;
-  color: white;
-  background-color: pink;
-  border: none;
-  border-radius: 10px;
-  margin-top: 20px;
+    min-width: 10vw;
+    font-size: 20px;
+    border-radius: 30px;
+    padding: 10px;
+    color: white;
+    background-color: #a92be4;
+    overflow: hidden;
+    white-space: nowrap;
+    align-self: center;
+    border: none;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    margin-top: 20px;
+}
 
+.resume-btn:hover {
+  color: #a92be4;
+  background-color: white;
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .rotating-circle {
