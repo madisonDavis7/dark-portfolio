@@ -179,6 +179,9 @@ body {
     
 .div1 {
     grid-row: span 3 / span 3;
+    min-height: 0;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .div1-img {
@@ -190,6 +193,9 @@ body {
 
 .div2 {
     grid-column: span 2 / span 2;
+    min-height: 0;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .div2-para {
@@ -212,6 +218,9 @@ body {
     grid-row: span 2 / span 2;
     grid-column-start: 2;
     grid-row-start: 2;
+    min-height: 0;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .div3-img, .div4-img, .div2-img {
@@ -225,6 +234,8 @@ body {
     grid-row: span 2 / span 2;
     grid-column-start: 3;
     grid-row-start: 2;
+    min-height: 0;
+    min-width: 0;
 }
 
 .div4-title {
