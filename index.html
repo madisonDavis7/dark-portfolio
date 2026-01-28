@@ -280,36 +280,36 @@
       <button class="carousel-arrow carousel-prev-des" aria-label="Previous slide">❮</button>
       <div class="carousel-viewport-des">
         <div class="container-apps-des">
-          <div class="poster-card" data-design="greengrid">
+          <a href="designs/greengridPage.html" class="poster-card" data-design="greengrid">
             <div class="content-des">
               <h2>GreenGrid</h2>
               <p>Website</p>
             </div>
-          </div>
-          <div class="poster-card" data-design="pulse">
+          </a>
+          <a href="designs/pulsePage.html" class="poster-card" data-design="pulse">
             <div class="content-des">
               <h2>Pulse</h2>
               <p>Website</p>
             </div>
-          </div>
-          <div class="poster-card" data-design="bakery">
+          </a>
+          <a href="designs/goodBakeryPage.html" class="poster-card" data-design="bakery">
             <div class="content-des">
               <h2>The Good Bakery</h2>
               <p>Website Design</p>
             </div>
-          </div>
-          <div class="poster-card" data-design="scoop">
+          </a>
+          <a href="designs/scoopPage.html" class="poster-card" data-design="scoop">
             <div class="content-des">
               <h2>Scoop & Joy</h2>
               <p>Website Design </p>
             </div>
-          </div>
-          <div class="poster-card" data-design="michi">
+          </a>
+          <a href="designs/michiPage.html" class="poster-card" data-design="michi">
             <div class="content-des">
               <h2>Michi Ramen</h2>
               <p>Website Redesign</p>
             </div>
-          </div>
+          </a>
           <div class="poster-card" data-design="childrens-center">
             <div class="content-des">
               <h2>The Children's Center</h2>
@@ -510,34 +510,40 @@
   document.querySelectorAll('.poster-card').forEach(card => {
     card.style.cursor = 'pointer';
     card.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
+      // Only prevent default if it's a div (not an anchor link)
+      if (card.tagName !== 'A') {
+        e.preventDefault();
+        e.stopPropagation();
+      }
 
       const designId = card.getAttribute('data-design');
       const data = designData[designId];
 
       if (data) {
-        modalTitle.textContent = data.title;
-        modalDescription.textContent = data.description;
+        // Only show modal for div cards, not anchor tags
+        if (card.tagName !== 'A') {
+          modalTitle.textContent = data.title;
+          modalDescription.textContent = data.description;
 
-        // Clear and add images
-        modalImages.innerHTML = '';
-        data.images.forEach(imgSrc => {
-          const img = document.createElement('img');
-          img.src = imgSrc;
-          img.alt = data.title;
-          img.onerror = () => {
-            img.src = 'images/placeholder.jpg';
-          };
-          modalImages.appendChild(img);
-        });
+          // Clear and add images
+          modalImages.innerHTML = '';
+          data.images.forEach(imgSrc => {
+            const img = document.createElement('img');
+            img.src = imgSrc;
+            img.alt = data.title;
+            img.onerror = () => {
+              img.src = 'images/placeholder.jpg';
+            };
+            modalImages.appendChild(img);
+          });
 
-        // Small delay to prevent immediate close
-        setTimeout(() => {
-          modal.style.display = 'block';
-          modal.scrollTop = 0; // Scroll modal to top
-          document.body.style.overflow = 'hidden';
-        }, 10);
+          // Small delay to prevent immediate close
+          setTimeout(() => {
+            modal.style.display = 'block';
+            modal.scrollTop = 0; // Scroll modal to top
+            document.body.style.overflow = 'hidden';
+          }, 10);
+        }
       }
     });
   });

@@ -725,7 +725,7 @@ body {
   top: 0;
   transition: left 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
-  >div {
+  >div, >a {
     flex: 0 0 300px;
     border-radius: 0.5rem;
     transition: 0.5s ease-in-out;
@@ -829,6 +829,11 @@ body {
   transition: all 0.3s ease;
   flex-shrink: 0;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.poster-card {
+  text-decoration: none;
+  color: inherit;
 }
 
 .carousel-arrow:hover {
@@ -1001,19 +1006,16 @@ footer {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 10px 35px rgba(163, 95, 245, 0.35);
-  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease, color 0.15s ease;
 }
 
 .submit-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 40px rgba(163, 95, 245, 0.45);
+  transform: scale(1.1);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+
 }
 
-.submit-btn:active {
-  transform: translateY(0);
-  filter: brightness(0.95);
-}
 
 /* Modal Styles */
 .modal {
@@ -1126,4 +1128,12 @@ footer {
 
 .modal-content::-webkit-scrollbar-thumb:hover {
   background: #d3afff;
+}
+
+/* Blogs page stuff */
+.header {
+  color: white;
+  font-size: 32px;
+  margin-top: 15vh;
+  text-align: center;
 }
