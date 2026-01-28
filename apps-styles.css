@@ -218,6 +218,10 @@ body {
     min-height: 0;
     min-width: 0;
     overflow: hidden;
+    transition: .5s ease-in-out;
+}
+.div1:hover {
+  transform: scale(1.05);
 }
 
 .div1-img {
@@ -232,6 +236,11 @@ body {
     min-height: 0;
     min-width: 0;
     overflow: hidden;
+    transition: .5s ease-in-out;
+}
+
+.div2:hover {
+  transform: scale(1.05);
 }
 
 .div2-para {
@@ -257,6 +266,10 @@ body {
     min-height: 0;
     min-width: 0;
     overflow: hidden;
+    transition: .5s ease-in-out;
+}
+.div3:hover {
+  transform: scale(1.05);
 }
 
 .div3-img, .div4-img, .div2-img {
