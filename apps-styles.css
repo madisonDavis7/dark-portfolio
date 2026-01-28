@@ -135,6 +135,41 @@ body {
   box-shadow: 0px 0px 101px 17px rgba(200, 132, 240, 0.9);
 }
 
+.rotating-circle.greengrid {
+  border: 15px dashed #639fe5;
+  -webkit-box-shadow: 0px 0px 101px 17px rgba(104, 133, 220, 0.9);
+  -moz-box-shadow: 0px 0px 101px 17px rgba(127, 153, 225, 0.9);
+  box-shadow: 0px 0px 101px 17px rgba(84, 113, 198, 0.9);
+}
+
+.rotating-circle.scoop {
+  border: 15px dashed #d697b8;
+  -webkit-box-shadow: 0px 0px 101px 17px rgba(220, 104, 203, 0.9);
+  -moz-box-shadow: 0px 0px 101px 17px rgba(231, 136, 207, 0.9);
+  box-shadow: 0px 0px 101px 17px rgba(196, 141, 181, 0.9);
+}
+
+.rotating-circle.bakery {
+  border: 15px dashed #594b42;
+  -webkit-box-shadow: 0px 0px 101px 17px #8d705e;
+  -moz-box-shadow: 0px 0px 101px 17px #dc793b;
+  box-shadow: 0px 0px 101px 17px #594b42;
+}
+
+.rotating-circle.pulse {
+  border: 15px dashed #b760e5;
+  -webkit-box-shadow: 0px 0px 101px 17px #c089de;
+  -moz-box-shadow: 0px 0px 101px 17px #be8ac6;
+  box-shadow: 0px 0px 101px 17px #bd86ce;
+}
+
+.rotating-circle.michi {
+  border: 15px dashed #f59083;
+  -webkit-box-shadow: 0px 0px 101px 17px #f49d91;
+  -moz-box-shadow: 0px 0px 101px 17px #f49d91;
+  box-shadow: 0px 0px 101px 17px #f49d91;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
