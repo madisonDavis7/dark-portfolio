@@ -1,0 +1,349 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* taskbar style */
+.taskbar-main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 0 20px;
+  gap: 12px;
+  overflow: hidden;
+  background: transparent;
+  z-index: 100;
+}
+
+.taskbar-left {
+  justify-self: start;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  min-width: 0;
+  text-decoration: none;
+}
+
+.taskbar-left:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.taskbar-right:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.taskbar-right {
+  justify-self: end;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.taskbar-center {
+  justify-self: center;
+  text-align: center;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+/* main app section */
+/* add animation here for the gradient background */
+.main-app-sect {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:hsla(0,0%,0%,1);
+    background-image:
+        radial-gradient(at 34% 55%, hsla(268,81%,36%,0.37) 0px, transparent 50%),
+        radial-gradient(at 0% 0%, hsla(0,0%,0%,1) 0px, transparent 50%),
+        radial-gradient(at 79% 17%, hsla(283,83%,46%,0.46) 0px, transparent 50%),
+        radial-gradient(at 5% 92%, hsla(285,83%,34%,0.57) 0px, transparent 50%),
+        radial-gradient(at 88% 59%, hsla(289,0%,0%,0.42) 0px, transparent 50%),
+        radial-gradient(at 77% 42%, hsla(272,72%,40%,0.57) 0px, transparent 50%);
+}
+
+.app-title {
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+    font-size: 50px;
+}
+
+.app-content {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    height: 80vh;
+    width: 90vw;
+}
+.app-col {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    align-items: stretch;
+    text-align: center;
+    flex-direction: column;
+    line-height: 1.5;
+    font-size: 22px;
+    justify-content: center;
+}
+
+.col-para {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.cube-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.cube-cell:nth-child(5) {
+  border-width: 3px;
+}
+
+.rotating-circle {
+  width: 28vw;
+  height: 28vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 15px dashed #530379;
+  animation: spin 19s linear infinite;
+  -webkit-box-shadow: 0px 0px 101px 17px rgba(88, 5, 136, 0.9);
+  -moz-box-shadow: 0px 0px 101px 17px rgba(178, 135, 202, 0.9);
+  box-shadow: 0px 0px 101px 17px rgba(200, 132, 240, 0.9);
+}
+
+.rotating-circle.greengrid {
+  border: 15px dashed #639fe5;
+  -webkit-box-shadow: 0px 0px 101px 17px rgba(104, 133, 220, 0.9);
+  -moz-box-shadow: 0px 0px 101px 17px rgba(127, 153, 225, 0.9);
+  box-shadow: 0px 0px 101px 17px rgba(84, 113, 198, 0.9);
+}
+
+.rotating-circle.scoop {
+  border: 15px dashed #d697b8;
+  -webkit-box-shadow: 0px 0px 101px 17px rgba(220, 104, 203, 0.9);
+  -moz-box-shadow: 0px 0px 101px 17px rgba(231, 136, 207, 0.9);
+  box-shadow: 0px 0px 101px 17px rgba(196, 141, 181, 0.9);
+}
+
+.rotating-circle.bakery {
+  border: 15px dashed #594b42;
+  -webkit-box-shadow: 0px 0px 101px 17px #8d705e;
+  -moz-box-shadow: 0px 0px 101px 17px #dc793b;
+  box-shadow: 0px 0px 101px 17px #594b42;
+}
+
+.rotating-circle.pulse {
+  border: 15px dashed #b760e5;
+  -webkit-box-shadow: 0px 0px 101px 17px #c089de;
+  -moz-box-shadow: 0px 0px 101px 17px #be8ac6;
+  box-shadow: 0px 0px 101px 17px #bd86ce;
+}
+
+.rotating-circle.michi {
+  border: 15px dashed #f59083;
+  -webkit-box-shadow: 0px 0px 101px 17px #f49d91;
+  -moz-box-shadow: 0px 0px 101px 17px #f49d91;
+  box-shadow: 0px 0px 101px 17px #f49d91;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.figma-btn {
+    min-width: 120px;
+    padding: 12px 24px;
+    min-height: 40px;
+    font-size: 20px;
+    border-radius: 30px;
+    color: white;
+    background-color: #a92be4;
+    overflow: hidden;
+    white-space: nowrap;
+    align-self: center;
+    border: none;
+    box-shadow: 5px 5px rgb(52, 50, 50);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.figma-btn:hover {
+  color: #a92be4;
+  background-color: white;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    width: 90vw;
+    height: 80vh;
+    margin-top: 10vh;
+}
+    
+.div1 {
+    grid-row: span 3 / span 3;
+    min-height: 0;
+    min-width: 0;
+    overflow: hidden;
+    transition: .5s ease-in-out;
+}
+.div1:hover {
+  transform: scale(1.05);
+}
+
+.div1-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.div2 {
+    grid-column: span 2 / span 2;
+    min-height: 0;
+    min-width: 0;
+    overflow: hidden;
+    transition: .5s ease-in-out;
+}
+
+.div2:hover {
+  transform: scale(1.05);
+}
+
+.div2-para {
+  font-size: 22px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+.div2-list {
+  display: flex;
+  gap: 20px; 
+  font-size: 22px;
+  line-height: 2;
+}
+.list-col {
+  flex: 1;
+  list-style: none;
+}
+
+.div3 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    min-height: 0;
+    min-width: 0;
+    overflow: hidden;
+    transition: .5s ease-in-out;
+}
+.div3:hover {
+  transform: scale(1.05);
+}
+
+.div3-img, .div4-img, .div2-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.div4 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 2;
+    min-height: 0;
+    min-width: 0;
+}
+
+.div4-title {
+  font-size: 36px;
+  text-align: center;
+}
+
+.div4-list {
+  font-size: 20px;
+  text-align: left;
+  line-height: 2;
+}
+
+
+/* footer content */
+footer {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+.footer-cont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: clamp(1rem, 1.5vw, 4rem);
+  color: white;
+  width: 100%;
+}
+
+.personal-logo {
+  width: 6vw;
+  height: auto;
+  padding-right: 1rem;
+}
+
+.linkedin-btn {
+  margin-right: auto;
+  color: inherit;
+  transition: color 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.linkedin-btn:hover {
+  color: #a35ff5;
+  transform: scale(1.1);
+}
+
+.git-btn {
+  margin-left: auto;
+  color: inherit;
+  transition: color 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.git-btn:hover {
+  color: #a35ff5;
+  transform: scale(1.1);
+}
