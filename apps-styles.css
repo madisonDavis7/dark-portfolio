@@ -85,7 +85,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: stretch;
-    height: 80vh;
+    min-height: 80vh;
     width: 90vw;
 }
 .app-col {
@@ -98,7 +98,7 @@ body {
     line-height: 1.5;
     font-size: 22px;
     justify-content: center;
-    border: solid red 2px;
+    padding: 20px;
 }
 
 .col-para {
