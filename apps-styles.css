@@ -98,6 +98,7 @@ body {
     line-height: 1.5;
     font-size: 22px;
     justify-content: center;
+    border: solid red 2px;
 }
 
 .col-para {
