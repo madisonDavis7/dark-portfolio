@@ -125,40 +125,34 @@
   document.querySelectorAll('.poster-card').forEach(card => {
     card.style.cursor = 'pointer';
     card.addEventListener('click', (e) => {
-      // Only prevent default if it's a div (not an anchor link)
-      if (card.tagName !== 'A') {
-        e.preventDefault();
-        e.stopPropagation();
-      }
+      e.preventDefault();
+      e.stopPropagation();
 
       const designId = card.getAttribute('data-design');
       const data = designData[designId];
 
       if (data) {
-        // Only show modal for div cards, not anchor tags
-        if (card.tagName !== 'A') {
-          modalTitle.textContent = data.title;
-          modalDescription.textContent = data.description;
+        modalTitle.textContent = data.title;
+        modalDescription.textContent = data.description;
 
-          // Clear and add images
-          modalImages.innerHTML = '';
-          data.images.forEach(imgSrc => {
-            const img = document.createElement('img');
-            img.src = imgSrc;
-            img.alt = data.title;
-            img.onerror = () => {
-              img.src = 'images/placeholder.jpg';
-            };
-            modalImages.appendChild(img);
-          });
+        // Clear and add images
+        modalImages.innerHTML = '';
+        data.images.forEach(imgSrc => {
+          const img = document.createElement('img');
+          img.src = imgSrc;
+          img.alt = data.title;
+          img.onerror = () => {
+            img.src = 'images/placeholder.jpg';
+          };
+          modalImages.appendChild(img);
+        });
 
-          // Small delay to prevent immediate close
-          setTimeout(() => {
-            modal.style.display = 'block';
-            modal.scrollTop = 0; // Scroll modal to top
-            document.body.style.overflow = 'hidden';
-          }, 10);
-        }
+        // Small delay to prevent immediate close
+        setTimeout(() => {
+          modal.style.display = 'block';
+          modal.scrollTop = 0; // Scroll modal to top
+          document.body.style.overflow = 'hidden';
+        }, 10);
       }
     });
   });
@@ -190,7 +184,7 @@
 
   // ESC key to close
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.style.display === 'flex') {
+    if (e.key === 'Escape' && modal.style.display === 'block') {
       closeModal();
     }
   });
