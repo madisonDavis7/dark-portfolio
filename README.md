@@ -10,13 +10,9 @@ I wanted the options of darkmode and lightmode
 
 I like designing and have too many portfolio ideas
 
-This was built with the intention of being viewer on a laptop or desktop
+This was built with the intention of being viewed on a laptop or desktop
 
-<<<<<<< HEAD
-**Goals**
-=======
 ## Goals ##
->>>>>>> 9ffdaa5b3c1bf5621f6f96d254cefc088199af3a
 1. Have a visually appealing site with a consistent theme
 2. Treat the process as I would any other client
 3. Have better organization for my projects and showcase my designs clearly
