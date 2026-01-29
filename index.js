@@ -1,6 +1,6 @@
 // Design carousel functionality
   const containerDes = document.querySelector('.container-apps-des');
-  const designCards = Array.from(document.querySelectorAll('.container-apps-des > div'));
+  const designCards = Array.from(document.querySelectorAll('.container-apps-des > *'));
   const prevBtnDes = document.querySelector('.carousel-prev-des');
   const nextBtnDes = document.querySelector('.carousel-next-des');
 
