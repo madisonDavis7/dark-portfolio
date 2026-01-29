@@ -621,15 +621,15 @@ body {
     overflow: hidden;
 
     &:nth-of-type(1) {
-      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/rubiks-img.jpg") no-repeat 50% / cover;
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("./images/rubiks-img.jpg") no-repeat 50% / cover;
     }
 
     &:nth-of-type(2) {
-      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/go-img.jpg") no-repeat 50% / cover;
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("./images/go-img.jpg") no-repeat 50% / cover;
     }
 
     &:nth-of-type(3) {
-      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/celestia-img.png") no-repeat 50% / cover;
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("./images/celestia-img.png") no-repeat 50% / cover;
     }
 
     .content {
@@ -736,50 +736,50 @@ body {
     overflow: hidden;
 
     &:nth-of-type(1) {
-      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/greengrid-img.png") no-repeat 50% / cover;
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("./images/greengrid-img.png") no-repeat 50% / cover;
     }
 
     &:nth-of-type(2) {
-      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/pulse-img.png") no-repeat 50% / cover;
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("./images/pulse-img.png") no-repeat 50% / cover;
     }
 
     &:nth-of-type(3) {
-      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/goodbakery-img.jpg") no-repeat 50% / cover;
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("./images/goodbakery-img.jpg") no-repeat 50% / cover;
     }
 
     &:nth-of-type(4) {
-      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/scoop-img.jpg") no-repeat 50% / cover;
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("./images/scoop-img.jpg") no-repeat 50% / cover;
     }
 
     &:nth-of-type(5) {
-      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/michi-img.webp") no-repeat 50% / cover;
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("./images/michi-img.webp") no-repeat 50% / cover;
     }
     &:nth-of-type(6) {
-      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/childrens-center-img.jpg") no-repeat 50% / cover;
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("./images/childrens-center-img.jpg") no-repeat 50% / cover;
     }
 
     &:nth-of-type(7) {
-      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/kikis-poster.png") no-repeat 50% / cover;
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("./images/kikis-poster.png") no-repeat 50% / cover;
     }
 
     &:nth-of-type(8) {
-      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/spirited-poster.png") no-repeat 50% / cover;
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("./images/spirited-poster.png") no-repeat 50% / cover;
     }
 
     &:nth-of-type(9) {
-      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/howl-poster.png") no-repeat 50% / cover;
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("./images/howl-poster.png") no-repeat 50% / cover;
     }
 
     &:nth-of-type(10) {
-      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/ponyo-poster.png") no-repeat 50% / cover;
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("./images/ponyo-poster.png") no-repeat 50% / cover;
     }
 
     &:nth-of-type(11) {
-      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/laputa-poster.png") no-repeat 50% / cover;
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("./images/laputa-poster.png") no-repeat 50% / cover;
     }
 
     &:nth-of-type(12) {
-      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("/images/totoro-poster.png") no-repeat 50% / cover;
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("./images/totoro-poster.png") no-repeat 50% / cover;
     }
 
 
