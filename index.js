@@ -125,11 +125,17 @@
   document.querySelectorAll('.poster-card').forEach(card => {
     card.style.cursor = 'pointer';
     card.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-
       const designId = card.getAttribute('data-design');
       const data = designData[designId];
+      
+      // If card has href, let it navigate normally
+      if (card.hasAttribute('href')) {
+        return;
+      }
+
+      // Prevent default only for cards without href (modal cards)
+      e.preventDefault();
+      e.stopPropagation();
 
       if (data) {
         modalTitle.textContent = data.title;
@@ -149,7 +155,7 @@
 
         // Small delay to prevent immediate close
         setTimeout(() => {
-          modal.style.display = 'block';
+          modal.classList.add('show');
           modal.scrollTop = 0; // Scroll modal to top
           document.body.style.overflow = 'hidden';
         }, 10);
@@ -159,7 +165,7 @@
 
   // Close modal function
   function closeModal() {
-    modal.style.display = 'none';
+    modal.classList.remove('show');
     document.body.style.overflow = '';
   }
 
@@ -184,7 +190,7 @@
 
   // ESC key to close
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.style.display === 'block') {
+    if (e.key === 'Escape' && modal.classList.contains('show')) {
       closeModal();
     }
   });

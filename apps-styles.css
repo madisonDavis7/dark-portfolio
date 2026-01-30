@@ -171,6 +171,13 @@ body {
   box-shadow: 0px 0px 101px 17px #f49d91;
 }
 
+.rotating-circle.childrens-center {
+  border: 15px dashed #17bece;
+  -webkit-box-shadow: 0px 0px 101px 17px #69c9d2;
+  -moz-box-shadow: 0px 0px 101px 17px #3e777c;
+  box-shadow: 0px 0px 101px 17px #69c9d2;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
