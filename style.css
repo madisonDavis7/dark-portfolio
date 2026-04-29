@@ -235,7 +235,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 30px;
+  font-size: 2vw;
   color: white;
   background-color: black;
 }
@@ -363,7 +363,7 @@ body {
   gap: 40px;
   padding: 60px 20px;
   margin-bottom: 50px;
-  font-size: 40px;
+  font-size: clamp(22px, 3.5vw, 40px);
   color: white;
   background-color: hsla(0, 0%, 0%, 1);
   background-image:
@@ -396,7 +396,7 @@ body {
   width: 55%;
   max-width: 640px;
   height: 570px;
-  padding: 32px;
+  padding: clamp(16px, 2.5vw, 32px);
   border-radius: 24px;
   background: rgba(134, 127, 134, 0.79);
   border: 1px solid rgba(134, 127, 134, 0.31);
@@ -410,7 +410,7 @@ body {
   justify-items: center;
   gap: 8px;
   text-align: start;
-  font-size: 28px;
+  font-size: clamp(15px, 2vw, 28px);
   letter-spacing: 0.5px;
   color: #f7eaff;
   transform: translateX(0) scale(0.78);
@@ -423,7 +423,7 @@ body {
 .job-card::after {
   content: attr(data-desc);
   display: block;
-  font-size: 16px;
+  font-size: clamp(12px, 1.3vw, 16px);
   color: rgba(255, 255, 255, 0.9);
   opacity: 0.9;
 }
@@ -465,7 +465,7 @@ body {
   border-radius: 15px;
   text-align: left;
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: clamp(12px, 1.4vw, 18px);
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -477,7 +477,7 @@ body {
 }
 
 .job-para {
-  font-size: 18px;
+  font-size: clamp(12px, 1.4vw, 18px);
   text-align: start;
   list-style-type: disc;
   line-height: 1.7;
@@ -1135,6 +1135,41 @@ footer {
 @media (min-width: 1200px) {
   .modal-content {
     margin: 80px auto 40px auto;
+  }
+}
+
+/* Job card responsive breakpoints */
+@media (max-width: 900px) {
+  .carousel {
+    height: 540px;
+  }
+  .job-card {
+    width: 70%;
+    height: 540px;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel {
+    height: 500px;
+  }
+  .job-card {
+    width: 88%;
+    height: 500px;
+  }
+  .job-card.is-prev,
+  .job-card.is-next {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 400px) {
+  .carousel {
+    height: 480px;
+  }
+  .job-card {
+    width: 92%;
+    height: 480px;
   }
 }
 
