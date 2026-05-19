@@ -201,7 +201,7 @@ body {
     white-space: nowrap;
     align-self: center;
     border: none;
-    box-shadow: 5px 5px rgb(52, 50, 50);
+    text-decoration: none;
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 

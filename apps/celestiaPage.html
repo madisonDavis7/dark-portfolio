@@ -1,77 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Celestia Page</title>
-    <link rel="stylesheet" href="../apps-styles.css" />
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celestia Page</title>
+  <link rel="stylesheet" href="../apps-styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    .cel-section {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 0;
+    }
+
+    .cel-heading {
+      font-size: clamp(22px, 2.5vw, 36px);
+      margin: 0 0 20px 0;
+      color: white;
+    }
+
+    .cel-para {
+      font-size: clamp(14px, 1.4vw, 17px);
+      line-height: 1.85;
+      color: rgba(255, 255, 255, 0.85);
+      margin: 0;
+    }
+
+    .cel-centered {
+      text-align: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Tools */
+    .cel-tools {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .cel-tool {
+      font-size: clamp(13px, 1.2vw, 16px);
+      padding: 6px 20px;
+      border: 1px solid rgba(163, 95, 245, 0.55);
+      border-radius: 20px;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    /* Key Features */
+    .cel-features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .cel-feature-col i {
+      font-size: 2.2rem;
+      color: #a35ff5;
+    }
+
+    .cel-feature-col h4 {
+      font-size: clamp(15px, 1.5vw, 19px);
+      margin: 14px 0 8px;
+      color: white;
+    }
+
+    .cel-feature-col p {
+      font-size: clamp(13px, 1.2vw, 15px);
+      line-height: 1.75;
+      color: rgba(255, 255, 255, 0.8);
+      margin: 0;
+    }
+
+    /* Two-column sections */
+    .cel-two-col {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 50vh;
+    }
+
+    .cel-two-col-text {
+      padding: 60px 6%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+    }
+
+    .cel-two-col-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 80px 40px 20px;
+    }
+
+    .cel-two-col-img img {
+      width: 100%;
+      height: auto;
+      max-height: 280px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    /* Process */
+    .cel-process {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px 80px;
+      width: 100%;
+    }
+
+    .cel-process-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .cel-num {
+      font-size: clamp(28px, 3.5vw, 44px);
+      font-weight: bold;
+      color: #a35ff5;
+      line-height: 1;
+      min-width: 36px;
+    }
+
+    .cel-process-row p {
+      font-size: clamp(14px, 1.3vw, 16px);
+      line-height: 1.75;
+      color: rgba(255, 255, 255, 0.85);
+      margin: 6px 0 0;
+    }
+
+    /* Learned */
+    .cel-learned .cel-para {
+      max-width: 800px;
+    }
+
+    /* Finale */
+    .cel-finale {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 36px;
+      padding: 80px 0;
+    }
+
+    .cel-final-img {
+      width: 90%;
+      max-width: 1100px;
+      max-height: 60vh;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+  </style>
 </head>
 <body>
-    <div class="taskbar-main">
-        <a class="taskbar-left" href="../contact.html">Contact</a>
-        <a class="taskbar-center" href="../index.html">Madison Davis</a>
-        <a class="taskbar-right" href="../blogs.html">Blogs</a>
+  <div class="taskbar-main">
+    <a class="taskbar-left" href="../contact.html">Contact</a>
+    <a class="taskbar-center" href="../index.html">Madison Davis</a>
+    <a class="taskbar-right" href="../blogs.html">All Projects</a>
   </div>
+
   <div class="main-app-sect">
-    <h2 class="app-title">Celestia Page</h2>
-    <div class="app-content">
-      <div class="app-col">
-        <div class="cube-grid">
-          <div class="cube-cell">UI Design</div>
-          <div class="cube-cell"></div>
-          <div class="cube-cell">API Integration</div>
-          <div class="cube-cell"></div>
-          <div class="cube-cell">
-            <div class="rotating-circle"></div>
-          </div>
-          <div class="cube-cell"></div>
-          <div class="cube-cell"></div>
-          <div class="cube-cell"></div>
-          <div class="cube-cell">Team Project</div>
+    <h2 class="app-title">Celestia</h2>
+
+    <!-- Mission -->
+    <section class="cel-section cel-centered">
+      <h3 class="cel-heading">Mission</h3>
+      <p class="cel-para">
+          When I set out to design this app I wanted to create a fun and simple way for children to learn some facts about the planets. 
+          The goal was to have the app be interactive and easy to navigate, no matter the age of the user. I wanted to share my love of astronomy
+          and create a learning tool to facilitate that. 
+      </p>
+    </section>
+
+    <!-- Tools and Technology -->
+    <section class="cel-section cel-centered">
+      <h3 class="cel-heading">Tools and Technology</h3>
+      <div class="cel-tools">
+        <span class="cel-tool">Ionic</span>
+        <span class="cel-tool">Visual Studio</span>
+        <span class="cel-tool">JavaScript</span>
+        <span class="cel-tool">Firebase</span>
+        <span class="cel-tool">ISS API</span>
+      </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="cel-section cel-centered">
+      <h3 class="cel-heading">Key Features</h3>
+      <div class="cel-features">
+        <div class="cel-feature-col">
+          <i class="fa-solid fa-star"></i>
+          <h4>Interactive Planets</h4>
+          <p>Explore our solar system by clicking through the Sun and planets. </p>
+        </div>
+        <div class="cel-feature-col">
+          <i class="fa-solid fa-search"></i>
+          <h4>Interactive Map</h4>
+          <p>There is an interactive map integrated into the app that let's user see the current location of the ISS. </p>
+        </div>
+        <div class="cel-feature-col">
+          <i class="fa-solid fa-moon"></i>
+          <h4>Solar System Facts</h4>
+          <p>The Sun and it's surrounding planets each have 4 facts listed on their respective pages. </p>
         </div>
       </div>
-      <div class="app-col">
-        <p>This was an individual project done in my third year of college for a web development class. This project utilized React and Ionic. React was a new tool and there was quite a learning curve for me regarding it. I had never worked with a framework like it 
-                before, but it proved very beneficial and has helped me many times since. regarding the design, I wanted it to be a clean and simple informative app. I didn't want a ton of 
-                text, and instead wanted the focus to be on the visuals and interactivity of the app. When creating this I had younger kids in mind, so I wanted lots of colors, a map that could be 
-                played with, and an interface that was easy to navigate. </p>
-        <button class="figma-btn" onclick="window.open('https://celestia-ionic.web.app/home', '_blank')">Celestia</button>
+    </section>
+
+    <!-- Solution -->
+    <div class="cel-two-col">
+      <div class="cel-two-col-text">
+        <h3 class="cel-heading">Solution</h3>
+        <p class="cel-para">
+          The web app I created has a minimal design that is both appealing and allows the information to stand out. The design is responsive for all screen sizes, 
+          making it more accessible, and works well on tablets. This was intentional and aimed at being a tool for classrooms. 
+        </p>
       </div>
-              
+      <div class="cel-two-col-img">
+        <img src="../images/celestia-1.png" alt="Celestia solution screenshot" />
+      </div>
     </div>
-    <div class="parent">
-      <div class="div1">
-        <img class="div1-img" src="../images/celestia-1.png" />
-      </div>
-      <div class="div2">
-        <div class="div2-para">
-            <p>Over the span of this project I faced several setbacks and challenges. This was my first time working wtih React and Typescript so there was quite a learning curve 
-                in terms of understanding the structure, syntax, and best practices. I utilized many resources including official documentation, my professor, and online forums. This was a beneficial skill 
-                though and I've contuined to use React since. I had ran into issues with my API integration, but after many hours of debugging and switching APIs I was able to get it 
-                successfully working. 
-            </p>
+
+    <!-- Process -->
+    <section class="cel-section cel-centered">
+      <h3 class="cel-heading">Process</h3>
+      <div class="cel-process">
+        <div class="cel-process-row">
+          <span class="cel-num">1</span>
+          <p>Brainstorm the core concept and research existing astronomy tools to find gaps worth filling</p>
         </div>
-        <div class="div2-list">
-            <ul class="list-col">
-                <li>Firebase for hosting</li>
-                <li>Ionic Framework for UI</li>
-                <li>React for frontend development</li>
-            </ul>
-            <ul class="list-col">
-                <li>Google Maps API for map integration</li>
-                <li>ISS API for ISS location</li>
-                <li>Figma for Design</li>
-            </ul>
+        <div class="cel-process-row">
+          <span class="cel-num">4</span>
+          <p>Choose a new framework (Ionic) to experiment with</p>
+        </div>
+        <div class="cel-process-row">
+          <span class="cel-num">2</span>
+          <p>Create several initial wireframes to get the layout and structure</p>
+        </div>
+        <div class="cel-process-row">
+          <span class="cel-num">5</span>
+          <p>Choose a final design and begin implementing</p>
+        </div>
+        <div class="cel-process-row">
+          <span class="cel-num">3</span> 
+          <pCollaborate with peers to find and figure out how to embed an ISS live tracker</p>
+        </div>
+        <div class="cel-process-row">
+          <span class="cel-num">6</span>
+          <p>Test across devices, refine any issues, and host the final product</p>
         </div>
       </div>
-      <div class="div3">
-        <img class="div3-img"src="../images/celestia-3.png" />
+    </section>
+
+    <!-- Challenges -->
+    <div class="cel-two-col">
+      <div class="cel-two-col-img">
+        <img src="../images/celestia-2.png" alt="Celestia challenges screenshot" />
       </div>
-      <div class="div4">
-        <img class="div4-img" src="../images/celestia-4.png" />
+      <div class="cel-two-col-text">
+        <h3 class="cel-heading">Challenges</h3>
+        <p class="cel-para">
+          The biggest challenge was accurately converting spherical astronomical coordinates into Three.js
+          world space. Small rounding errors caused visible misalignment at the edges of the sphere.
+          Performance was another hurdle — rendering thousands of stars at once required instanced geometry
+          and careful draw-call budgeting to keep frame rates smooth on lower-end hardware.
+        </p>
       </div>
     </div>
+
+    <!-- Learned Along the Way -->
+    <section class="cel-section cel-learned cel-centered">
+      <h3 class="cel-heading">Learned Along the Way</h3>
+      <p class="cel-para">
+        This project deepened my understanding of 3D math, coordinate systems, and WebGL-based rendering
+        through Three.js. I also learned how to work with public scientific APIs and parse large datasets
+        efficiently in the browser. Beyond the technical side, designing for a dark, data-heavy interface
+        pushed me to think more carefully about contrast, hierarchy, and how to guide a user's eye without
+        cluttering the screen.
+      </p>
+    </section>
+
+    <!-- Finale -->
+    <div class="cel-finale">
+      <img src="../images/celestia-3.png" alt="Celestia app preview" class="cel-final-img" />
+      <a href="#" class="figma-btn">Explore</a>
+    </div>
+
     <footer>
       <div class="footer-cont">
         <a class="linkedin-btn" href="https://www.linkedin.com/in/madison-davis-07b327238/">
