@@ -145,22 +145,66 @@
       max-width: 800px;
     }
 
-    /* Finale */
-    .cel-finale {
+    /* Images row */
+    .cel-images-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-bottom: 60px;
+    }
+
+    .cel-images-row img {
       width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    /* Prototype embed */
+    .cel-prototype {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 0 80px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 36px;
-      padding: 80px 0;
+      gap: 28px;
     }
 
-    .cel-final-img {
+    .cel-prototype iframe {
+      width: 100%;
+      height: 580px;
+      border: 1px solid rgba(163, 95, 245, 0.35);
+      border-radius: 12px;
+    }
+
+    .cel-prototype-lines {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      text-align: center;
+    }
+
+    /* 4-photo centered row */
+    .cel-quad-images {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
       width: 90%;
       max-width: 1100px;
-      max-height: 60vh;
+      margin: 0 auto;
+      padding-bottom: 60px;
+    }
+
+    .cel-quad-images img {
+      width: calc(25% - 15px);
+      aspect-ratio: 3/4;
       object-fit: cover;
-      border-radius: 16px;
+      border-radius: 12px;
     }
   </style>
 </head>
@@ -278,9 +322,55 @@
       </div>
     </div>
 
+    <!-- User Testing -->
+    <section class="cel-section cel-centered">
+      <h3 class="cel-heading">User Testing</h3>
+      <div class="cel-features">
+        <div class="cel-feature-col">
+          <i class="fa-solid fa-users"></i>
+          <h4>Who</h4>
+          <p>Six participants recruited from friends, classmates, and roommates representing a range of ages and comfort with mobile apps.</p>
+        </div>
+        <div class="cel-feature-col">
+          <i class="fa-solid fa-circle-question"></i>
+          <h4>Why</h4>
+          <p>To surface any usability issues in the prototype and validate our design decisions before the final class presentation.</p>
+        </div>
+        <div class="cel-feature-col">
+          <i class="fa-solid fa-clipboard-list"></i>
+          <h4>What</h4>
+          <p>In-person sessions using a detailed test plan with task-based scenarios, observation checklists, and follow-up interview questions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testing Images -->
+    <div class="cel-images-row">
+      <img src="../images/critter-test-1.png" alt="User testing session 1" />
+      <img src="../images/critter-test-2.png" alt="User testing session 2" />
+      <img src="../images/critter-test-3.png" alt="User testing session 3" />
+    </div>
+
+    <!-- Results -->
+    <div class="cel-two-col">
+      <div class="cel-two-col-img">
+        <img src="../images/critter-results.png" alt="Testing results" />
+      </div>
+      <div class="cel-two-col-text">
+        <h3 class="cel-heading">Results</h3>
+        <p class="cel-para">
+          Across all six sessions, participants found the core critter-capturing flow intuitive and enjoyable.
+          The most consistent feedback pointed to a few unclear navigation labels and a desire for more
+          visual feedback when saving a critter. We also heard that the social sharing flow felt a step too long.
+          After analyzing the results, I made targeted updates to the nav labels, added a confirmation animation
+          on save, and trimmed the share flow down by one screen.
+        </p>
+      </div>
+    </div>
+
     <!-- Learned Along the Way -->
     <section class="cel-section cel-learned cel-centered">
-      <h3 class="cel-heading">Learned Along the Way</h3>
+      <h3 class="cel-heading">Analysis</h3>
       <p class="cel-para">
         This project deepened my understanding of 3D math, coordinate systems, and WebGL-based rendering
         through Three.js. I also learned how to work with public scientific APIs and parse large datasets
@@ -289,12 +379,28 @@
         cluttering the screen.
       </p>
     </section>
-
-    <!-- Finale -->
-    <div class="cel-finale">
-      <img src="../images/celestia-3.png" alt="Celestia app preview" class="cel-final-img" />
-      <a href="https://www.figma.com/design/X13mioGiNK2zySEHdpZI0p/Critter-Collector?node-id=0-1&p=f&t=ZXrSYYXuDZyvS4As-0" class="figma-btn" target="_blank">Explore</a>
+    
+    <!-- Analysis Photos -->
+    <div class="cel-quad-images">
+      <img src="../images/critter-analysis-1.png" alt="Analysis photo 1" />
+      <img src="../images/critter-analysis-2.png" alt="Analysis photo 2" />
+      <img src="../images/critter-analysis-3.png" alt="Analysis photo 3" />
+      <img src="../images/critter-analysis-4.png" alt="Analysis photo 4" />
     </div>
+
+    <!-- Explore the Prototype -->
+    <section class="cel-prototype">
+      <h3 class="cel-heading">Explore the Prototype</h3>
+      <iframe
+        src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/X13mioGiNK2zySEHdpZI0p/Critter-Collector?node-id=0-1&p=f&t=lt4OufKFMwPj5Kfq-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A500"
+        allowfullscreen
+      ></iframe>
+      <div class="cel-prototype-lines">
+        <p class="cel-para">Navigate through the full interactive prototype of Critter Collector.</p>
+        <p class="cel-para">Experience the critter-capturing flow, social features, and customization options firsthand.</p>
+      </div>
+      <a href="https://www.figma.com/design/X13mioGiNK2zySEHdpZI0p/Critter-Collector?node-id=0-1&p=f&t=lt4OufKFMwPj5Kfq-0" class="figma-btn" target="_blank">Explore</a>
+    </section>
 
     <footer>
       <div class="footer-cont">
