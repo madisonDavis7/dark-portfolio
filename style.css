@@ -595,7 +595,7 @@ body {
   gap: 10px;
 
   >div {
-    flex: 0 0 300px;
+    flex: 0 0 200px;
     border-radius: 0.5rem;
     transition: 0.5s ease-in-out;
     cursor: pointer;
@@ -613,6 +613,10 @@ body {
 
     &:nth-of-type(3) {
       background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("./images/celestia-img.png") no-repeat 50% / cover;
+    }
+
+    &:nth-of-type(4) {
+      background: linear-gradient(135deg, rgba(90, 10, 160, 0.6), rgba(40, 0, 80, 0.8));
     }
 
     .content {
@@ -636,9 +640,9 @@ body {
     }
 
     &:hover {
-      flex: 0 0 400px;
+      flex: 0 0 250px;
       box-shadow: 1px 3px 15px #7645d8;
-      transform: translatey(-30px);
+      transform: translatey(-15px);
     }
 
     &:hover .content {
