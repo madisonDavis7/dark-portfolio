@@ -81,6 +81,14 @@ body {
     font-size: 50px;
 }
 
+.app-subtitle {
+    margin-top: calc(-10vh + 10px);
+    margin-bottom: 10vh;
+    font-size: clamp(14px, 1.5vw, 20px);
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.65);
+}
+
 .app-content {
     display: flex;
     flex-direction: row;

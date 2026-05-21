@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Critter Collector</title>
+  <link rel="stylesheet" href="../apps-styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    .cel-section {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 0;
+    }
+
+    .cel-heading {
+      font-size: clamp(22px, 2.5vw, 36px);
+      margin: 0 0 20px 0;
+      color: white;
+    }
+
+    .cel-para {
+      font-size: clamp(14px, 1.4vw, 17px);
+      line-height: 1.85;
+      color: rgba(255, 255, 255, 0.85);
+      margin: 0;
+    }
+
+    .cel-centered {
+      text-align: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Tools */
+    .cel-tools {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .cel-tool {
+      font-size: clamp(13px, 1.2vw, 16px);
+      padding: 6px 20px;
+      border: 1px solid rgba(163, 95, 245, 0.55);
+      border-radius: 20px;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    /* Key Features */
+    .cel-features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .cel-feature-col i {
+      font-size: 2.2rem;
+      color: #a35ff5;
+    }
+
+    .cel-feature-col h4 {
+      font-size: clamp(15px, 1.5vw, 19px);
+      margin: 14px 0 8px;
+      color: white;
+    }
+
+    .cel-feature-col p {
+      font-size: clamp(13px, 1.2vw, 15px);
+      line-height: 1.75;
+      color: rgba(255, 255, 255, 0.8);
+      margin: 0;
+    }
+
+    /* Two-column sections */
+    .cel-two-col {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 50vh;
+    }
+
+    .cel-two-col-text {
+      padding: 60px 6%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+    }
+
+    .cel-two-col-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 32px 40px 20px;
+    }
+
+    .cel-two-col-img img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    /* Process */
+    .cel-process {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px 80px;
+      width: 100%;
+    }
+
+    .cel-process-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .cel-num {
+      font-size: clamp(28px, 3.5vw, 44px);
+      font-weight: bold;
+      color: #a35ff5;
+      line-height: 1;
+      min-width: 36px;
+    }
+
+    .cel-process-row p {
+      font-size: clamp(14px, 1.3vw, 16px);
+      line-height: 1.75;
+      color: rgba(255, 255, 255, 0.85);
+      margin: 6px 0 0;
+      text-align: left;
+    }
+
+    /* Learned */
+    .cel-learned .cel-para {
+      max-width: 800px;
+    }
+
+    /* Images row */
+    .cel-images-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-bottom: 60px;
+    }
+
+    .cel-images-row img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    /* Prototype embed */
+    .cel-prototype {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 0 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .cel-prototype iframe {
+      width: 100%;
+      height: 580px;
+      border: 1px solid rgba(163, 95, 245, 0.35);
+      border-radius: 12px;
+    }
+
+    .cel-prototype-lines {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      text-align: center;
+    }
+
+    /* 4-photo centered row */
+    .cel-quad-images {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-bottom: 60px;
+    }
+
+    .cel-quad-images img {
+      width: calc(25% - 15px);
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="taskbar-main">
+    <a class="taskbar-left" href="../contact.html">Contact</a>
+    <a class="taskbar-center" href="../index.html">Madison Davis</a>
+    <a class="taskbar-right" href="../blogs.html">All Projects</a>
+  </div>
+
+  <div class="main-app-sect">
+    <h2 class="app-title">Critter Collector</h2>
+
+    <!-- Mission -->
+    <section class="cel-section cel-centered">
+      <h3 class="cel-heading">Background</h3>
+      <p class="cel-para">
+          This app design was created as a pair project for a UI Design class I took in college. When I was brainstorming ideas for this I knew I wanted it to have to do with 
+          cats, have a cute aesthetic, and be for all ages. On my commute to work or class I would get very excited and take a photo of any cats I saw, so my original 
+          idea was a cat collecting app. This branched into a critter collecting app after the first round of class feedback. 
+      </p>
+    </section>
+
+    <!-- Tools and Technology -->
+    <section class="cel-section cel-centered">
+      <h3 class="cel-heading">Tools and Technology</h3>
+      <div class="cel-tools">
+        <span class="cel-tool">Figma</span>
+        <span class="cel-tool">Qualtrics</span>
+        <span class="cel-tool">Google Suite</span>
+      </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="cel-section cel-centered">
+      <h3 class="cel-heading">Key Features</h3>
+      <div class="cel-features">
+        <div class="cel-feature-col">
+          <i class="fa-solid fa-star"></i>
+          <h4>In-app Camera</h4>
+          <p>Users can efficiently snap a photo of a critter with the app's built-in camera that allows for endless retakes.  </p>
+        </div>
+        <div class="cel-feature-col">
+          <i class="fa-solid fa-search"></i>
+          <h4>Socials</h4>
+          <p>A secure social functions lets you add friends, quickly share your critters, and leave comments on friends' posts!</p>
+        </div>
+        <div class="cel-feature-col">
+          <i class="fa-solid fa-moon"></i>
+          <h4>Customizability</h4>
+          <p>Upload a profile picture, create collections, change the theme and more </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution -->
+    <div class="cel-two-col">
+      <div class="cel-two-col-text">
+        <h3 class="cel-heading">Working Together</h3>
+        <p class="cel-para">
+          Because this was a pair project we had to decide how we were going to combine our ideas seamlessly, break up the workload, and communicate clearly
+          what we were working on. This was a semester long project. I ended up taking the lead on the design aspect because I had a clearer idea of what the app 
+          would look like, had lots of experience with Figma, and have a love for designing in general. My partner took on more of the work with getting our 
+          test plan for user testing created and ensured we would be prepared. 
+        </p>
+      </div>
+      <div class="cel-two-col-img">
+        <img src="../images/celestia-1.png" alt="Celestia solution screenshot" />
+      </div>
+    </div>
+
+    <!-- Process -->
+    <section class="cel-section cel-centered">
+      <h3 class="cel-heading">Process</h3>
+      <div class="cel-process">
+        <div class="cel-process-row">
+          <span class="cel-num">1</span>
+          <p>Design some initial wireframes and plan out our functional requirements</p>
+        </div>
+        <div class="cel-process-row">
+          <span class="cel-num">4</span>
+          <p>Develop a complet test plan (checklist, scenarios, interview questions, etc.) and recruit testers from our friends, classmates, and roomates</p>
+        </div>
+        <div class="cel-process-row">
+          <span class="cel-num">2</span>
+          <p>Create a high fidelity prototype and conduct initial in-class feedback sessions</p>
+        </div>
+        <div class="cel-process-row">
+          <span class="cel-num">5</span>
+          <p>Conduct 6 in-person user testing sessions and analyze the results</p>
+        </div>
+        <div class="cel-process-row">
+          <span class="cel-num">3</span> 
+          <p>Make a working prototype and conduct heuristic evaluations with 2 groups of classmates</p>
+        </div>
+        <div class="cel-process-row">
+          <span class="cel-num">6</span>
+          <p>Address any issues or changes after analyzing the results and create a final presentation showcasing the app</p>
+        </div>
+      </div>
+    </section>
+    <!-- Challenges -->
+    <div class="cel-two-col">
+      <div class="cel-two-col-img">
+        <img src="../images/celestia-2.png" alt="Celestia challenges screenshot" />
+      </div>
+      <div class="cel-two-col-text">
+        <h3 class="cel-heading">Challenges</h3>
+        <p class="cel-para">
+          There were no huge challenges during this project. There were a few technical issues during two of our testing seesions but they were 
+          quickly resolved and the sessions finished smoothly. It was a bit difficult getting contradictive feedback from our evaluations and deciding 
+          what changes should be made, in the end I chose to go with the changes I felt I agreed with because in the end it was my original design and 
+          there were no real clients involved. 
+        </p>
+      </div>
+    </div>
+
+    <!-- User Testing -->
+    <section class="cel-section cel-centered">
+      <h3 class="cel-heading">User Testing</h3>
+      <div class="cel-features">
+        <div class="cel-feature-col">
+          <i class="fa-solid fa-users"></i>
+          <h4>Who</h4>
+          <p>Six participants recruited from friends, classmates, and roommates representing a range of ages and comfort with mobile apps.</p>
+        </div>
+        <div class="cel-feature-col">
+          <i class="fa-solid fa-circle-question"></i>
+          <h4>Why</h4>
+          <p>To surface any usability issues in the prototype and validate our design decisions before the final class presentation.</p>
+        </div>
+        <div class="cel-feature-col">
+          <i class="fa-solid fa-clipboard-list"></i>
+          <h4>What</h4>
+          <p>In-person sessions using a detailed test plan with task-based scenarios, observation checklists, and follow-up interview questions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testing Images -->
+    <div class="cel-images-row">
+      <img src="../images/critter-test-1.png" alt="User testing session 1" />
+      <img src="../images/critter-test-2.png" alt="User testing session 2" />
+      <img src="../images/critter-test-3.png" alt="User testing session 3" />
+    </div>
+
+    <!-- Results -->
+    <div class="cel-two-col">
+      <div class="cel-two-col-img">
+        <img src="../images/critter-results.png" alt="Testing results" />
+      </div>
+      <div class="cel-two-col-text">
+        <h3 class="cel-heading">Results</h3>
+        <p class="cel-para">
+          Across all six sessions, participants found the core critter-capturing flow intuitive and enjoyable.
+          The most consistent feedback pointed to a few unclear navigation labels and a desire for more
+          visual feedback when saving a critter. We also heard that the social sharing flow felt a step too long.
+          After analyzing the results, I made targeted updates to the nav labels, added a confirmation animation
+          on save, and trimmed the share flow down by one screen.
+        </p>
+      </div>
+    </div>
+
+    <!-- Learned Along the Way -->
+    <section class="cel-section cel-learned cel-centered">
+      <h3 class="cel-heading">Analysis</h3>
+      <p class="cel-para">
+        This project deepened my understanding of 3D math, coordinate systems, and WebGL-based rendering
+        through Three.js. I also learned how to work with public scientific APIs and parse large datasets
+        efficiently in the browser. Beyond the technical side, designing for a dark, data-heavy interface
+        pushed me to think more carefully about contrast, hierarchy, and how to guide a user's eye without
+        cluttering the screen.
+      </p>
+    </section>
+    
+    <!-- Analysis Photos -->
+    <div class="cel-quad-images">
+      <img src="../images/critter-analysis-1.png" alt="Analysis photo 1" />
+      <img src="../images/critter-analysis-2.png" alt="Analysis photo 2" />
+      <img src="../images/critter-analysis-3.png" alt="Analysis photo 3" />
+      <img src="../images/critter-analysis-4.png" alt="Analysis photo 4" />
+    </div>
+
+    <!-- Explore the Prototype -->
+    <section class="cel-prototype">
+      <h3 class="cel-heading">Explore the Prototype</h3>
+      <iframe
+        src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/X13mioGiNK2zySEHdpZI0p/Critter-Collector?node-id=0-1&p=f&t=lt4OufKFMwPj5Kfq-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A500"
+        allowfullscreen
+      ></iframe>
+      <div class="cel-prototype-lines">
+        <p class="cel-para">Navigate through the full interactive prototype of Critter Collector.</p>
+        <p class="cel-para">Experience the critter-capturing flow, social features, and customization options firsthand.</p>
+      </div>
+      <a href="https://www.figma.com/design/X13mioGiNK2zySEHdpZI0p/Critter-Collector?node-id=0-1&p=f&t=lt4OufKFMwPj5Kfq-0" class="figma-btn" target="_blank">Explore</a>
+    </section>
+
+    <footer>
+      <div class="footer-cont">
+        <a class="linkedin-btn" href="https://www.linkedin.com/in/madison-davis-07b327238/">
+          <i class="fa-brands fa-linkedin fa-2x"></i>
+        </a>
+        <img src="../images/personal-logo.svg" alt="personal logo" class="personal-logo">
+        <p>Designed by Madison Davis</p>
+        <a class="git-btn" href="https://github.com/madisonDavis7">
+          <i class="fa-brands fa-github fa-2x"></i>
+        </a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
