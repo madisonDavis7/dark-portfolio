@@ -604,11 +604,11 @@ body {
     overflow: hidden;
 
     &:nth-of-type(1) {
-      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("./images/rubiks-img.jpg") no-repeat 50% / cover;
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("./images/itrr-image.jpg") no-repeat 50% / cover;
     }
 
     &:nth-of-type(2) {
-      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("./images/go-img.jpg") no-repeat 50% / cover;
+      background: linear-gradient(rgba(162, 10, 208, 0.25), rgba(128, 0, 128, 0.25)), url("./images/spare-change-image.jpg") no-repeat 50% / cover;
     }
 
     &:nth-of-type(3) {
@@ -616,7 +616,7 @@ body {
     }
 
     &:nth-of-type(4) {
-      background: linear-gradient(135deg, rgba(90, 10, 160, 0.6), rgba(40, 0, 80, 0.8));
+      background: linear-gradient(135deg, rgba(90, 10, 160, 0.6), rgba(40, 0, 80, 0.8)), url("./images/critter-collector-image.jpg") no-repeat 30% / cover;
     }
 
     .content {
