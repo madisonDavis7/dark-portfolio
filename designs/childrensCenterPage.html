@@ -1,75 +1,321 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Children's Center Page</title>
-    <link rel="stylesheet" href="../apps-styles.css" />
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Childrens Center</title>
+  <link rel="stylesheet" href="../apps-styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    .cel-section {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 0;
+    }
+
+    .cel-heading {
+      font-size: clamp(22px, 2.5vw, 36px);
+      margin: 0 0 20px 0;
+      color: white;
+    }
+
+    .cel-para {
+      font-size: clamp(14px, 1.4vw, 17px);
+      line-height: 1.85;
+      color: rgba(255, 255, 255, 0.85);
+      margin: 0;
+    }
+
+    .cel-centered {
+      text-align: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Tools */
+    .cel-tools {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .cel-tool {
+      font-size: clamp(13px, 1.2vw, 16px);
+      padding: 6px 20px;
+      border: 1px solid rgba(163, 95, 245, 0.55);
+      border-radius: 20px;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    /* Key Features */
+    .cel-features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .cel-feature-col i {
+      font-size: 2.2rem;
+      color: #a35ff5;
+    }
+
+    .cel-feature-col h4 {
+      font-size: clamp(15px, 1.5vw, 19px);
+      margin: 14px 0 8px;
+      color: white;
+    }
+
+    .cel-feature-col p {
+      font-size: clamp(13px, 1.2vw, 15px);
+      line-height: 1.75;
+      color: rgba(255, 255, 255, 0.8);
+      margin: 0;
+    }
+
+    /* Two-column sections */
+    .cel-two-col {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 50vh;
+    }
+
+    .cel-two-col-text {
+      padding: 60px 6%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+    }
+
+    .cel-two-col-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 80px 40px 20px;
+    }
+
+    .cel-two-col-img img {
+      width: 100%;
+      height: auto;
+      max-height: 280px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .cel-two-col-img:first-child {
+      padding: 40px 20px 40px 80px;
+    }
+
+    /* Process */
+    .cel-process {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px 80px;
+      width: 100%;
+    }
+
+    .cel-process-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .cel-num {
+      font-size: clamp(28px, 3.5vw, 44px);
+      font-weight: bold;
+      color: #a35ff5;
+      line-height: 1;
+      min-width: 36px;
+    }
+
+    .cel-process-row p {
+      font-size: clamp(14px, 1.3vw, 16px);
+      line-height: 1.75;
+      color: rgba(255, 255, 255, 0.85);
+      margin: 6px 0 0;
+      text-align: left;
+    }
+
+    /* Learned */
+    .cel-learned .cel-para {
+      max-width: 800px;
+    }
+
+    /* Finale */
+    .cel-finale {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 36px;
+      padding: 80px 0;
+    }
+
+    .cel-final-img {
+      width: 90%;
+      max-width: 1100px;
+      height: 60vh;
+      border-radius: 16px;
+    }
+
+    .final-para {
+      width: 70%;
+      text-align: center;
+    }
+
+    @media (min-width: 1900px) {
+      .cel-heading { font-size: 42px; }
+      .cel-para { font-size: 20px;}
+      .cel-tool { font-size: 18px; }
+      .cel-feature-col h4 { font-size: 22px; }
+      .cel-feature-col p { font-size: 20px; }
+      .cel-process-row p { font-size: 20px; }
+      .final-para { font-size: 20px; }
+    }
+  </style>
 </head>
 <body>
-    <div class="taskbar-main">
-        <a class="taskbar-left" href="../contact.html">Contact</a>
-        <a class="taskbar-center" href="../index.html">Madison Davis</a>
-        <a class="taskbar-right" href="../blogs.html">Blogs</a>
+  <div class="taskbar-main">
+    <a class="taskbar-left" href="../contact.html">Contact</a>
+    <a class="taskbar-center" href="../index.html">Madison Davis</a>
+    <a class="taskbar-right" href="../blogs.html">All Projects</a>
   </div>
+
   <div class="main-app-sect">
-    <h2 class="app-title">The Children's Center</h2>
-    <div class="app-content">
-      <div class="app-col">
-        <div class="cube-grid">
-          <div class="cube-cell">Existing Website Redesign</div>
-          <div class="cube-cell"></div>
-          <div class="cube-cell">Simple, Educational, Fun</div>
-          <div class="cube-cell"></div>
-          <div class="cube-cell">
-            <div class="rotating-circle childrens-center"></div>
-          </div>
-          <div class="cube-cell"></div>
-          <div class="cube-cell"></div>
-          <div class="cube-cell"></div>
-          <div class="cube-cell">Cross Platform Design</div>
+    <h2 class="app-title">The Childrens Center</h2>
+
+    <!-- Mission -->
+    <section class="cel-section cel-centered">
+      <h3 class="cel-heading">Mission</h3>
+      <p class="cel-para">
+          When I began this project I wanted to enhance my re-designing skills. The goal was to keep all the information from the original website, but use 
+          color and layout to highlight the essential information. This was made with parents in mind, so keeping the information organized and easy to find was important. 
+      </p>
+    </section>
+
+    <!-- Tools and Technology -->
+    <section class="cel-section cel-centered">
+      <h3 class="cel-heading">Tools and Skills</h3>
+      <div class="cel-tools">
+        <span class="cel-tool">Figma</span>
+        <span class="cel-tool">Website Redesign</span>
+        <span class="cel-tool">Intentional Color</span>
+        <span class="cel-tool">Composition</span>
+      </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="cel-section cel-centered">
+      <h3 class="cel-heading">Key Features</h3>
+      <div class="cel-features">
+        <div class="cel-feature-col">
+          <i class="fa-solid fa-baby-carriage"></i>
+          <h4>Children Centered</h4>
+          <p>The website design was created with children in mind. The images and colors reflect a playful and fun environment.  </p>
+        </div>
+        <div class="cel-feature-col">
+          <i class="fa-solid fa-fill-drip"></i>
+          <h4>Use of Color</h4>
+          <p>The design was kept clean and modern, with pops of color used to highlight information, break up the sections, and add an inviting feel. </p>
+        </div>
+        <div class="cel-feature-col">
+          <i class="fa-solid fa-mobile-screen"></i>
+          <h4>Mobile Friendly</h4>
+          <p>A mobile design was created so users could easily naviigate the website on the go. A focus was placed on breaking up the text and keeping the playful attitude of the website.  </p>
         </div>
       </div>
-      <div class="app-col">
-        <p class="col-para">This redesign project was created for The Children's Center where a friend's mom is the director. Originally I was going to redo their current website to 
-            give it an updated feel that would reflect the fun and educational environemnt. Eventhough I didn't end up redesigning for the client, I did still want to explore how I would 
-            have done it. The original site was very dated and felt cluttered with too much text and no break points. When I began brainstorming I wanted to keep the same colors but add more imagery, 
-            whitespace, and make it feel more like a place kids would want to be. 
+    </section>
+
+    <!-- Solution -->
+    <div class="cel-two-col">
+      <div class="cel-two-col-text">
+        <h3 class="cel-heading">Re-Design</h3>
+        <p class="cel-para">
+          The goal of this project was to re-design an existing website, focusing on a clean, modern approach while keeping the original colors and mood.
+          I wanted to add more images to break up the extensive text, utilize more white-space to create a minimal look, and add rounded edges to contribute to 
+          the cohesiveness of the overall site. 
         </p>
-        <p class="col-para">
-            I wanted the site to highlight the bright and fun atmosphere of the center. To do this I used colored blocks to break up the whitespace and add pops of color. I made sure it was not 
-            an overwhelming amount of information and that the pages flowed a lot betterhttps://www.fi. 
-        </p>
-        <button class="figma-btn" onclick="window.open('https://www.figma.com/design/NcD8VoAJh04zqfdfuRpD20/The-Childrens-center?m=dev&t=3XEhdORZDrEztvh4-1', '_blank')">Wireframe</button>
+      </div>
+      <div class="cel-two-col-img">
+        <img src="../images/childrens-solution.png" alt="Childrens Center solution screenshot" />
       </div>
     </div>
-    <div class="parent">
-      <div class="div1">
-        <div class="div1-img">
-            <img src="../images/childrens-center-1.png" class="div1-img" />
+
+    <!-- Process -->
+    <section class="cel-section cel-centered">
+      <h3 class="cel-heading">Process</h3>
+      <div class="cel-process">
+        <div class="cel-process-row">
+          <span class="cel-num">1</span>
+          <p>Take notes on pitfalls of the current website and brainstorm new ideas</p>
+        </div>
+        <div class="cel-process-row">
+          <span class="cel-num">3</span>
+          <p>Choose the final layout and begin adding images, text, and polishing touches</p>
+        </div>
+        <div class="cel-process-row">
+          <span class="cel-num">2</span>
+          <p>Create a few mock-ups for each page (web only)</p>
+        </div>
+        <div class="cel-process-row">
+          <span class="cel-num">4</span> 
+          <p>Translate the web version into a mobile friendly mock-up</p>
         </div>
       </div>
-      <div class="div2">
-        <div class="div2-img">
-            <img src="../images/childrens-center-2.jpg" class="div2-img" />
-        </div>
+    </section>
+
+    <!-- Challenges -->
+    <div class="cel-two-col">
+      <div class="cel-two-col-img">
+        <img src="../images/childrens-challenges.png" alt="Celestia challenges screenshot" />
       </div>
-      <div class="div3">
-        <div class="div3-img">
-            <img src="../images/childrens-center-3.png" class="div3-img" />
-        </div>
-      </div>
-      <div class="div4">
-        <p class="div4-title">Learned:</p>
-        <ol class="div4-list">
-          <li>Figma Components and Connections</li>
-          <li>Crafting a Story Through Images </li>
-          <li>Logo Design </li>
-          <li>Scrolling Effects for User Engagement</li>
-        </ol>
+      <div class="cel-two-col-text">
+        <h3 class="cel-heading">Challenges</h3>
+        <p class="cel-para">
+          There were a couple challenges when designing this website, one of which was including all the relevant text, but breaking it up to 
+          be aesthetically pleasing to look at. The homepage had several paragraphs of text that were overwhelming to look at. I knew that in my 
+          updated version I wanted to have the text be less overpowering, but still wanted all the information on the home page. I was able to add some images 
+          to break up the block of text, creating a cohesive page with the relevant information. 
+        </p>
       </div>
     </div>
+
+    <!-- Learned Along the Way -->
+    <section class="cel-section cel-learned cel-centered">
+      <h3 class="cel-heading">Learned Along the Way</h3>
+      <p class="cel-para">
+        This project deepened my understanding of 3D math, coordinate systems, and WebGL-based rendering
+        through Three.js. I also learned how to work with public scientific APIs and parse large datasets
+        efficiently in the browser. Beyond the technical side, designing for a dark, data-heavy interface
+        pushed me to think more carefully about contrast, hierarchy, and how to guide a user's eye without
+        cluttering the screen.
+      </p>
+    </section>
+
+    <!-- Finale -->
+    <div class="cel-finale">
+      <iframe
+        class="cel-final-img"
+        style="border: none; border-radius: 16px;"
+        src="https://embed.figma.com/design/NcD8VoAJh04zqfdfuRpD20/The-Childrens-center?embed-host=share"
+        allowfullscreen
+      ></iframe>
+      <a href="#" class="figma-btn" target="_blank">Explore the Site</a>
+      <p class="final-para">Because this was just a re-design of an existing site I did not create an actual website. The goal of this 
+        project was to purely focus on the design and not worry about the implementation. You can explore my Figma board above. 
+      </p>
+    </div>
+
     <footer>
       <div class="footer-cont">
         <a class="linkedin-btn" href="https://www.linkedin.com/in/madison-davis-07b327238/">

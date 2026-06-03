@@ -1,77 +1,313 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michi Ramen Page</title>
-    <link rel="stylesheet" href="../apps-styles.css" />
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michi Ramen</title>
+  <link rel="stylesheet" href="../apps-styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    .cel-section {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 0;
+    }
+
+    .cel-heading {
+      font-size: clamp(22px, 2.5vw, 36px);
+      margin: 0 0 20px 0;
+      color: white;
+    }
+
+    .cel-para {
+      font-size: clamp(14px, 1.4vw, 17px);
+      line-height: 1.85;
+      color: rgba(255, 255, 255, 0.85);
+      margin: 0;
+    }
+
+    .cel-centered {
+      text-align: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Tools */
+    .cel-tools {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .cel-tool {
+      font-size: clamp(13px, 1.2vw, 16px);
+      padding: 6px 20px;
+      border: 1px solid rgba(163, 95, 245, 0.55);
+      border-radius: 20px;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    /* Key Features */
+    .cel-features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .cel-feature-col i {
+      font-size: 2.2rem;
+      color: #a35ff5;
+    }
+
+    .cel-feature-col h4 {
+      font-size: clamp(15px, 1.5vw, 19px);
+      margin: 14px 0 8px;
+      color: white;
+    }
+
+    .cel-feature-col p {
+      font-size: clamp(13px, 1.2vw, 15px);
+      line-height: 1.75;
+      color: rgba(255, 255, 255, 0.8);
+      margin: 0;
+    }
+
+    /* Two-column sections */
+    .cel-two-col {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 50vh;
+    }
+
+    .cel-two-col-text {
+      padding: 60px 6%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+    }
+
+    .cel-two-col-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 80px 40px 20px;
+    }
+
+    .cel-two-col-img img {
+      width: 100%;
+      height: auto;
+      max-height: 280px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .cel-two-col-img:first-child {
+      padding: 40px 20px 40px 80px;
+    }
+
+    /* Process */
+    .cel-process {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px 80px;
+      width: 100%;
+    }
+
+    .cel-process-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .cel-num {
+      font-size: clamp(28px, 3.5vw, 44px);
+      font-weight: bold;
+      color: #a35ff5;
+      line-height: 1;
+      min-width: 36px;
+    }
+
+    .cel-process-row p {
+      font-size: clamp(14px, 1.3vw, 16px);
+      line-height: 1.75;
+      color: rgba(255, 255, 255, 0.85);
+      margin: 6px 0 0;
+      text-align: left;
+    }
+
+    /* Learned */
+    .cel-learned .cel-para {
+      max-width: 800px;
+    }
+
+    /* Finale */
+    .cel-finale {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 36px;
+      padding: 80px 0;
+    }
+
+    .cel-final-img {
+      width: 90%;
+      max-width: 1100px;
+      height: 60vh;
+      border-radius: 16px;
+    }
+
+    @media (min-width: 1900px) {
+      .cel-heading { font-size: 42px; }
+      .cel-para { font-size: 19px; }
+      .cel-tool { font-size: 18px; }
+      .cel-feature-col h4 { font-size: 22px; }
+      .cel-feature-col p { font-size: 17px; }
+      .cel-process-row p { font-size: 18px; }
+    }
+  </style>
 </head>
 <body>
-    <div class="taskbar-main">
-        <a class="taskbar-left" href="../contact.html">Contact</a>
-        <a class="taskbar-center" href="../index.html">Madison Davis</a>
-        <a class="taskbar-right" href="../blogs.html">Blogs</a>
+  <div class="taskbar-main">
+    <a class="taskbar-left" href="../contact.html">Contact</a>
+    <a class="taskbar-center" href="../index.html">Madison Davis</a>
+    <a class="taskbar-right" href="../blogs.html">All Projects</a>
   </div>
+
   <div class="main-app-sect">
     <h2 class="app-title">Michi Ramen</h2>
-    <div class="app-content">
-      <div class="app-col">
-        <div class="cube-grid">
-          <div class="cube-cell">Website Redesign for Community Company</div>
-          <div class="cube-cell"></div>
-          <div class="cube-cell">Menu Layout, Featured Images</div>
-          <div class="cube-cell"></div>
-          <div class="cube-cell">
-            <div class="rotating-circle michi"></div>
-          </div>
-          <div class="cube-cell"></div>
-          <div class="cube-cell"></div>
-          <div class="cube-cell"></div>
-          <div class="cube-cell">Limited Colors</div>
+
+    <!-- Mission -->
+    <section class="cel-section cel-centered">
+      <h3 class="cel-heading">Mission</h3>
+      <p class="cel-para">
+          When I set out to design this app I wanted to create a fun and simple way for children to learn some facts about the planets. 
+          The goal was to have the app be interactive and easy to navigate, no matter the age of the user. I wanted to share my love of astronomy
+          and create a learning tool to facilitate that. 
+      </p>
+    </section>
+
+    <!-- Tools and Technology -->
+    <section class="cel-section cel-centered">
+      <h3 class="cel-heading">Tools and Skills</h3>
+      <div class="cel-tools">
+        <span class="cel-tool">Figma</span>
+        <span class="cel-tool">Redesign</span>
+        <span class="cel-tool">Menu Layout</span>
+        <span class="cel-tool">Composition</span>
+      </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="cel-section cel-centered">
+      <h3 class="cel-heading">Key Features</h3>
+      <div class="cel-features">
+        <div class="cel-feature-col">
+          <i class="fa-solid fa-utensils"></i>
+          <h4>Clean Menus</h4>
+          <p>Explore our solar system by clicking through the Sun and planets. </p>
+        </div>
+        <div class="cel-feature-col">
+          <i class="fa-solid fa-photo-film"></i>
+          <h4>Image Layout</h4>
+          <p>There is an interactive map integrated into the app that let's user see the current location of the ISS. </p>
+        </div>
+        <div class="cel-feature-col">
+          <i class="fa-solid fa-paper-plane"></i>
+          <h4>Contact Form</h4>
+          <p>The Sun and it's surrounding planets each have 4 facts listed on their respective pages. </p>
         </div>
       </div>
-      <div class="app-col">
-        <p class="col-para">This project began after I saw a cool bakery website on Pinterest. I liked the browns and overall aesthetic so I decided to make my own 
-            bakery website. I wanted it to feel professinal and modern, but also have a cozy, neighborhood vibe to it. My first step was to search the internet and resources around me 
-            for some inspiration for a mood board. I begin all my design projects with a mood board because it helps me naroow down the base colors, feel, and structure of the design. Onve I had some 
-            ideas I created the low level wireframe in Figma and then moved on to the high level prototypes. This was my first time creating components in Figma and 
-            making a fully functional prototype. 
+    </section>
+
+    <!-- Solution -->
+    <div class="cel-two-col">
+      <div class="cel-two-col-text">
+        <h3 class="cel-heading">Re-Design</h3>
+        <p class="cel-para">
+          The web app I created has a minimal design that is both appealing and allows the information to stand out. The design is responsive for all screen sizes, 
+          making it more accessible, and works well on tablets. This was intentional and aimed at being a tool for classrooms. 
         </p>
-        <p class="col-para">
-            I wanted to keep the site feeling modern and timeless, so I went with a thinner font and more whitespace. The logog was kept simple, with no color and 
-            only line work. I wanted a very elegant experience for users so I found images with darker backgrounds, a focus on the dish, and warm lighting to compliment the earth tones 
-            used throughout the site. 
-        </p>
-        <button class="figma-btn" onclick="window.open('https://www.figma.com/design/aINsRGpCT1FIinMAD7NaVN/Michi-Ramen?node-id=0-1&m=dev&t=lOiJmfXj9XfNT0GA-1', '_blank')">Prototype</button>
+      </div>
+      <div class="cel-two-col-img">
+        <img src="../images/michi-image.webp" alt="Celestia solution screenshot" />
       </div>
     </div>
-    <div class="parent">
-      <div class="div1">
-        <div class="div1-img">
-            <img src="../images/michi-1.png" class="div1-img" />
+
+    <!-- Process -->
+    <section class="cel-section cel-centered">
+      <h3 class="cel-heading">Process</h3>
+      <div class="cel-process">
+        <div class="cel-process-row">
+          <span class="cel-num">1</span>
+          <p>Brainstorm the core concept and research existing astronomy tools to find gaps worth filling</p>
+        </div>
+        <div class="cel-process-row">
+          <span class="cel-num">3</span>
+          <p>Choose a final design and begin implementing</p>
+        </div>
+        <div class="cel-process-row">
+          <span class="cel-num">2</span>
+          <p>Choose a new framework (Ionic) to experiment with</p>
+        </div>
+        <div class="cel-process-row">
+          <span class="cel-num">4</span> 
+          <p>Create several initial wireframes to get the layout and structure</p>
         </div>
       </div>
-      <div class="div2">
-        <div class="div2-img">
-            <img src="../images/michi-2.png" class="div2-img" />
-        </div>
+    </section>
+
+    <!-- Challenges -->
+    <div class="cel-two-col">
+      <div class="cel-two-col-img">
+        <img src="../images/goodbakery-3.png" alt="Celestia challenges screenshot" />
       </div>
-      <div class="div3">
-        <div class="div3-img">
-            <img src="../images/michi-3.png" class="div3-img" />
-        </div>
-      </div>
-      <div class="div4">
-        <p class="div4-title">Learned:</p>
-        <ol class="div4-list">
-          <li>Improving an Exsting Website</li>
-          <li>Menu Design </li>
-          <li>Creating a Modern Taskbar</li>
-          <li>Consistent Theme Throughout</h
-        </ol>
+      <div class="cel-two-col-text">
+        <h3 class="cel-heading">Challenges</h3>
+        <p class="cel-para">
+          The biggest challenge was accurately converting spherical astronomical coordinates into Three.js
+          world space. Small rounding errors caused visible misalignment at the edges of the sphere.
+          Performance was another hurdle — rendering thousands of stars at once required instanced geometry
+          and careful draw-call budgeting to keep frame rates smooth on lower-end hardware.
+        </p>
       </div>
     </div>
+
+    <!-- Learned Along the Way -->
+    <section class="cel-section cel-learned cel-centered">
+      <h3 class="cel-heading">Learned Along the Way</h3>
+      <p class="cel-para">
+        This project deepened my understanding of 3D math, coordinate systems, and WebGL-based rendering
+        through Three.js. I also learned how to work with public scientific APIs and parse large datasets
+        efficiently in the browser. Beyond the technical side, designing for a dark, data-heavy interface
+        pushed me to think more carefully about contrast, hierarchy, and how to guide a user's eye without
+        cluttering the screen.
+      </p>
+    </section>
+
+    <!-- Finale -->
+    <div class="cel-finale">
+      <iframe
+        class="cel-final-img"
+        style="border: none; border-radius: 16px;"
+        src="https://embed.figma.com/design/aINsRGpCT1FIinMAD7NaVN/Michi-Ramen?node-id=0-1&embed-host=share"
+        allowfullscreen
+      ></iframe>
+      <a href="#" class="figma-btn" target="_blank">Explore the Site</a>
+      <p>To </p>
+    </div>
+
     <footer>
       <div class="footer-cont">
         <a class="linkedin-btn" href="https://www.linkedin.com/in/madison-davis-07b327238/">
