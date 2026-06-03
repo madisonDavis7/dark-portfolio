@@ -265,9 +265,9 @@
     <section class="cel-section cel-centered">
       <h3 class="cel-heading">Background</h3>
       <p class="cel-para">
-          This app design was created as a pair project for a UI Design class I took in college. When I was brainstorming ideas for this I knew I wanted it to have to do with 
-          cats, have a cute aesthetic, and be for all ages. On my commute to work or class I would get very excited and take a photo of any cats I saw, so my original 
-          idea was a cat collecting app. This branched into a critter collecting app after the first round of class feedback. 
+          This app is the product of a group project for my Advanced Software Engineering class. I was in a group of four and this was a semester long. The goal 
+          of the app was to provide community members with a quick way to find weekend jobs, pet sitters, and other smaller one time jobs. We wanted to 
+          create an app that only had necessary information, was simple to use, and was geared towards the community. 
       </p>
     </section>
 
@@ -276,14 +276,11 @@
       <h3 class="cel-heading">Tools and Technology</h3>
       <div class="cel-tools">
         <span class="cel-tool">Figma</span>
-        <span class="cel-tool">Qualtrics</span>
-        <span class="cel-tool">Google Suite</span>
-        <span class="cel-tool">React</span>
-        <span class="cel-tool">Sanity Studio</span>
+        <span class="cel-tool">Django</span>
         <span class="cel-tool">GitHub</span>
-        <span class="cel-tool">Firebase</span>
-
-
+        <span class="cel-tool">GitHub Actions</span>
+        <span class="cel-tool">Ollama</span>
+        <span class="cel-tool">SQLite</span>
       </div>
     </section>
 
@@ -294,17 +291,17 @@
         <div class="cel-feature-col">
           <i class="fa-solid fa-wand-magic-sparkles"></i>
           <h4>AI Enhancement</h4>
-          <p>Users can efficiently snap a photo of a critter with the app's built-in camera that allows for endless retakes.  </p>
+          <p>Users can choose to use the ai enhancement button to get a more in-depth job description when creating a post  </p>
         </div>
         <div class="cel-feature-col">
           <i class="fa-solid fa-palette"></i>
           <h4>Themes</h4>
-          <p>A secure social functions lets you add friends, quickly share your critters, and leave comments on friends' posts!</p>
+          <p>There are three theme options to choose from, allowing you to personalize the app</p>
         </div>
         <div class="cel-feature-col">
           <i class="fa-solid fa-house-lock"></i>
           <h4>Secure Location</h4>
-          <p>Upload a profile picture, create collections, change the theme and more </p>
+          <p>UWhen users post a job the exact location is hidden from other users and instead a general range around the address is shown </p>
         </div>
       </div>
     </section>
@@ -314,10 +311,10 @@
       <div class="cel-two-col-text">
         <h3 class="cel-heading">Working Together</h3>
         <p class="cel-para">
-          Because this was a pair project we had to decide how we were going to combine our ideas seamlessly, break up the workload, and communicate clearly
-          what we were working on. This was a semester long project. I ended up taking the lead on the design aspect because I had a clearer idea of what the app 
-          would look like, had lots of experience with Figma, and have a love for designing in general. My partner took on more of the work with getting our 
-          test plan for user testing created and ensured we would be prepared. 
+          Because this was a group project there were some adjustments and learning curves. We had to decide on a design after each of us created our own wireframes. In the end 
+          I took on the role of designer and made the final high-fidelity mockup. At the beginning of this project we decided on roles for each of us. This app was going to 
+          be created in sprints in an agile environment, with sprints being about 4 weeks long. I ended up being the main design and frontend lead. The other members took on backend lead, team lead, 
+          and priority tester. We used a RACI matrix each sprint to keep track of who was doing what, helping with smooth and efficient communication. 
         </p>
       </div>
       <div class="cel-two-col-img">
@@ -331,27 +328,27 @@
       <div class="cel-process">
         <div class="cel-process-row">
           <span class="cel-num">1</span>
-          <p>Design some initial wireframes and plan out our functional requirements</p>
+          <p>All members create wireframes and then combine those into a final design</p>
         </div>
         <div class="cel-process-row">
           <span class="cel-num">4</span>
-          <p>Develop a complet test plan (checklist, scenarios, interview questions, etc.) and recruit testers from our friends, classmates, and roomates</p>
+          <p>Continue implementation, beging functional testing and set up GitHub actions. </p>
         </div>
         <div class="cel-process-row">
           <span class="cel-num">2</span>
-          <p>Create a high fidelity prototype and conduct initial in-class feedback sessions</p>
+          <p>Create a high fidelity prototype, create user scenarios, and plan out tasks</p>
         </div>
         <div class="cel-process-row">
           <span class="cel-num">5</span>
-          <p>Conduct 6 in-person user testing sessions and analyze the results</p>
+          <p>Conduct user testing sessions and implement an AI feature into the app. </p>
         </div>
         <div class="cel-process-row">
           <span class="cel-num">3</span> 
-          <p>Make a working prototype and conduct heuristic evaluations with 2 groups of classmates</p>
+          <p>Begin implementing the first phase feature and planning out pages. </p>
         </div>
         <div class="cel-process-row">
           <span class="cel-num">6</span>
-          <p>Address any issues or changes after analyzing the results and create a final presentation showcasing the app</p>
+          <p>Make any necessary changes and confirm testing is at least 80% coverage</p>
         </div>
       </div>
     </section>
@@ -363,32 +360,31 @@
       <div class="cel-two-col-text">
         <h3 class="cel-heading">Challenges</h3>
         <p class="cel-para">
-          There were no huge challenges during this project. There were a few technical issues during two of our testing seesions but they were 
-          quickly resolved and the sessions finished smoothly. It was a bit difficult getting contradictive feedback from our evaluations and deciding 
-          what changes should be made, in the end I chose to go with the changes I felt I agreed with because in the end it was my original design and 
-          there were no real clients involved. 
+          In terms of working together and the design phase there were not any issues. Once we began the implementation phase a few arose. I hadn't used Django in a couple 
+          years and was quite rusty getting back into it. We had some issues with setting up GitHub actions and getting the YAML file to work correctly as well. This was eventually fixed and 
+          we successfully utilized CI/CD in our app. We also incorporated three different design patterns: Decorator Pattern, Singelton Pattern, and Strategy Pattern. 
         </p>
       </div>
     </div>
 
     <!-- User Testing -->
     <section class="cel-section cel-centered">
-      <h3 class="cel-heading">User Testing</h3>
+      <h3 class="cel-heading">Design Patterns</h3>
       <div class="cel-features">
         <div class="cel-feature-col">
-          <i class="fa-solid fa-users"></i>
-          <h4>Who</h4>
-          <p>Six participants recruited from friends, classmates, and roommates representing a range of ages and comfort with mobile apps.</p>
+          <i class="fa-solid fa-user-tie"></i>
+          <h4>Decorator</h4>
+          <p>This pattern was implemented so that admin users could delete any job posting, while normal users can only delete ones they posted. </p>
         </div>
         <div class="cel-feature-col">
-          <i class="fa-solid fa-circle-question"></i>
-          <h4>Why</h4>
-          <p>To surface any usability issues in the prototype and validate our design decisions before the final class presentation.</p>
+          <i class="fa-solid fa-map-location"></i>
+          <h4>Singelton</h4>
+          <p>The job view included details to create a radius around the exact address, while the users view had the explicit longitude and latitude. </p>
         </div>
         <div class="cel-feature-col">
-          <i class="fa-solid fa-clipboard-list"></i>
-          <h4>What</h4>
-          <p>In-person sessions using a detailed test plan with task-based scenarios, observation checklists, and follow-up interview questions.</p>
+          <i class="fa-solid fa-filter"></i>
+          <h4>Strategy</h4>
+          <p>There is a menu of options, an execution function that runs the chosen theme, and CSS variables that alter the UI based on what the user picks</p>
         </div>
       </div>
     </section>
@@ -408,24 +404,22 @@
       <div class="cel-two-col-text">
         <h3 class="cel-heading">Results</h3>
         <p class="cel-para">
-          Across all six sessions, participants found the core critter-capturing flow intuitive and enjoyable.
-          The most consistent feedback pointed to a few unclear navigation labels and a desire for more
-          visual feedback when saving a critter. We also heard that the social sharing flow felt a step too long.
-          After analyzing the results, I made targeted updates to the nav labels, added a confirmation animation
-          on save, and trimmed the share flow down by one screen.
+          The app is not fully finsihed but it is functional and serves its purpose. Users can create an account, post a job, and look through jobs posted by other users. 
+          The AI feature is optional and works pretty well for description enhancement. Because it uses Ollama, users would need to have Ollama installed and runnining 
+          in order to use the enhancement feature. There are future plans to host the app, add a profile page, and let users go back and edit 
+          posts they have created. 
         </p>
       </div>
     </div>
 
     <!-- Learned Along the Way -->
     <section class="cel-section cel-learned cel-centered">
-      <h3 class="cel-heading">Analysis</h3>
+      <h3 class="cel-heading">Analysis from User Testing</h3>
       <p class="cel-para">
-        This project deepened my understanding of 3D math, coordinate systems, and WebGL-based rendering
-        through Three.js. I also learned how to work with public scientific APIs and parse large datasets
-        efficiently in the browser. Beyond the technical side, designing for a dark, data-heavy interface
-        pushed me to think more carefully about contrast, hierarchy, and how to guide a user's eye without
-        cluttering the screen.
+        After conducting several user testing sessions we found that the app was simple to navigate and didn't cause confusion. There were a couple 
+        instances where users could input invalid data when creating a job, but we corrected those and ensured only valid inputs were allowed when creating a posting. Some users 
+        expressed concerns regarding the lack of editing, and we took that into account for our future goals. The sessions themselves went smoothly and let us gather valuable insights into 
+        how a user might utilize the site. 
       </p>
     </section>
     
@@ -441,7 +435,8 @@
 
       <div class="cel-prototype-lines">
         <p class="cel-para">
-            At the moment this app is not hosted anywhere
+            At the moment this app is not hosted anywhere but it can be pulled to your local machine and run. In the future I hope 
+            to get it hosted but for now I put several images from the various pages below. 
         </p>
       </div>
 
