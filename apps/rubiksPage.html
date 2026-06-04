@@ -1,80 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rubiks Cube Page</title>
+  <title>Rubiks Cube Simulator</title>
   <link rel="stylesheet" href="../apps-styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-</head>
+  <style>
+    .cel-section {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 0;
+    }
 
-<body class="rubik-body">
+    .cel-heading {
+      font-size: clamp(22px, 2.5vw, 36px);
+      margin: 0 0 20px 0;
+      color: white;
+    }
+
+    .cel-para {
+      font-size: clamp(14px, 1.4vw, 17px);
+      line-height: 1.85;
+      color: rgba(255, 255, 255, 0.85);
+      margin: 0;
+    }
+
+    .cel-centered {
+      text-align: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Tools */
+    .cel-tools {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .cel-tool {
+      font-size: clamp(13px, 1.2vw, 16px);
+      padding: 6px 20px;
+      border: 1px solid rgba(163, 95, 245, 0.55);
+      border-radius: 20px;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    /* Key Features */
+    .cel-features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .cel-feature-col i {
+      font-size: 2.2rem;
+      color: #a35ff5;
+    }
+
+    .cel-feature-col h4 {
+      font-size: clamp(15px, 1.5vw, 19px);
+      margin: 14px 0 8px;
+      color: white;
+    }
+
+    .cel-feature-col p {
+      font-size: clamp(13px, 1.2vw, 15px);
+      line-height: 1.75;
+      color: rgba(255, 255, 255, 0.8);
+      margin: 0;
+    }
+
+    /* Two-column sections */
+    .cel-two-col {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 50vh;
+    }
+
+    .cel-two-col-text {
+      padding: 60px 6%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+    }
+
+    .cel-two-col-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 80px 40px 20px;
+    }
+
+    .cel-two-col-img img {
+      width: 100%;
+      height: auto;
+      max-height: 280px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .cel-two-col-img:first-child {
+      padding: 40px 20px 40px 80px;
+    }
+
+    /* Process */
+    .cel-process {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px 80px;
+      width: 100%;
+    }
+
+    .cel-process-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .cel-num {
+      font-size: clamp(28px, 3.5vw, 44px);
+      font-weight: bold;
+      color: #a35ff5;
+      line-height: 1;
+      min-width: 36px;
+    }
+
+    .cel-process-row p {
+      font-size: clamp(14px, 1.3vw, 16px);
+      line-height: 1.75;
+      color: rgba(255, 255, 255, 0.85);
+      margin: 6px 0 0;
+      text-align: left;
+    }
+
+    /* Learned */
+    .cel-learned .cel-para {
+      max-width: 800px;
+    }
+
+    /* Finale */
+    .cel-finale {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 36px;
+      padding: 80px 0;
+    }
+
+    .cel-final-img {
+      width: 90%;
+      max-width: 1100px;
+      height: 60vh;
+      border-radius: 16px;
+    }
+
+    @media (min-width: 1900px) {
+      .cel-heading { font-size: 42px; }
+      .cel-para { font-size: 19px; }
+      .cel-tool { font-size: 18px; }
+      .cel-feature-col h4 { font-size: 22px; }
+      .cel-feature-col p { font-size: 17px; }
+      .cel-process-row p { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
   <div class="taskbar-main">
     <a class="taskbar-left" href="../contact.html">Contact</a>
     <a class="taskbar-center" href="../index.html">Madison Davis</a>
-    <a class="taskbar-right" href="../blogs.html">Blogs</a>
+    <a class="taskbar-right" href="../blogs.html">All Projects</a>
   </div>
+
   <div class="main-app-sect">
-    <h2 class="app-title">Rubik's Cube Page</h2>
-    <div class="app-content">
-      <div class="app-col">
-        <div class="cube-grid">
-          <div class="cube-cell">Learning Experience</div>
-          <div class="cube-cell"></div>
-          <div class="cube-cell">Object Oriented Programming</div>
-          <div class="cube-cell"></div>
-          <div class="cube-cell">
-            <div class="rotating-circle"></div>
-          </div>
-          <div class="cube-cell"></div>
-          <div class="cube-cell"></div>
-          <div class="cube-cell"></div>
-          <div class="cube-cell">Problem Solving</div>
+    <h2 class="app-title">Rubiks Cube Simulator</h2>
+
+    <!-- Mission -->
+    <section class="cel-section cel-centered">
+      <h3 class="cel-heading">Mission</h3>
+      <p class="cel-para">
+          When I set out to design this app I wanted to create a fun and simple way for children to learn some facts about the planets. 
+          The goal was to have the app be interactive and easy to navigate, no matter the age of the user. I wanted to share my love of astronomy
+          and create a learning tool to facilitate that. 
+      </p>
+    </section>
+
+    <!-- Tools and Technology -->
+    <section class="cel-section cel-centered">
+      <h3 class="cel-heading">Tools and Skills</h3>
+      <div class="cel-tools">
+        <span class="cel-tool">Java</span>
+        <span class="cel-tool">Terminal</span>
+        <span class="cel-tool">Lists and Strings</span>
+        <span class="cel-tool">CLI</span>
+
+      </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="cel-section cel-centered">
+      <h3 class="cel-heading">Key Features</h3>
+      <div class="cel-features">
+        <div class="cel-feature-col">
+          <i class="fa-solid fa-bread-slice"></i>
+          <h4>Terminal Based</h4>
+          <p>The game is based in the command line, shows the board output each turn, and will block invalid moved. </p>
+        </div>
+        <div class="cel-feature-col">
+          <i class="fa-solid fa-rectangle-list"></i>
+          <h4>Two Players</h4>
+          <p>It was built with two users in mind. Each player takes a turn inputting the grid coordinate they want to choose. </p>
+        </div>
+        <div class="cel-feature-col">
+          <i class="fa-solid fa-border-all"></i>
+          <h4>Score</h4>
+          <p>The games keeps track of each player's score and displays it each turn. </p>
         </div>
       </div>
-      <div class="app-col">
-        <p class="col-para">This project was the first one I did in my intermediate level Java class my second year of college. It was
-          the beginning of several projects and my journey into learning Java. This game pushed my
-          limits in the best ways, introducing me to what it's like to create a project from scratch, plan through
-          functions, and spend hours debugging. </p>
-        <button class="figma-btn">Figma Prototype</button>
+    </section>
+
+    <!-- Solution -->
+    <div class="cel-two-col">
+      <div class="cel-two-col-text">
+        <h3 class="cel-heading">Solution</h3>
+        <p class="cel-para">
+          The web app I created has a minimal design that is both appealing and allows the information to stand out. The design is responsive for all screen sizes, 
+          making it more accessible, and works well on tablets. This was intentional and aimed at being a tool for classrooms. 
+        </p>
+      </div>
+      <div class="cel-two-col-img">
+        <img src="../images/goodbakery-2.jpg" alt="Celestia solution screenshot" />
       </div>
     </div>
-    <div class="parent">
-      <div class="div1">
-        <img src="../images/cube-hand.jpg" class="div1-img" />
-      </div>
-      <div class="div2">
-        <div class="div2-para">
-          This was my first complete Java project. It is a command line application where users input random moves to
-          scramble a Rubik's cube, and the program outputs the moves
-          needed to solve the scrambled cube. This was done for a programming class in my second year of college and was
-          a great introduction to object-oriented programming, arrays, CLIs, amd
-          much more.
+
+    <!-- Process -->
+    <section class="cel-section cel-centered">
+      <h3 class="cel-heading">Process</h3>
+      <div class="cel-process">
+        <div class="cel-process-row">
+          <span class="cel-num">1</span>
+          <p>Brainstorm the core concept and research existing astronomy tools to find gaps worth filling</p>
         </div>
-        <div class="div2-para">
-          This specific project took a few weeks to complete. I began by planning out my process and getting an idea of
-          what functions would be needed. I utilized many resources, including classmates, online forums, and my
-          profeessor.
-          There were many late nights and many times I didn't think I could do it, but pushing through and reminding
-          myself I was still learning let me build a successful program. This was one of the
-          key projects and experiences that made me want to continue pursuing a career in software development.
+        <div class="cel-process-row">
+          <span class="cel-num">3</span>
+          <p>Choose a final design and begin implementing</p>
+        </div>
+        <div class="cel-process-row">
+          <span class="cel-num">2</span>
+          <p>Choose a new framework (Ionic) to experiment with</p>
+        </div>
+        <div class="cel-process-row">
+          <span class="cel-num">4</span> 
+          <p>Create several initial wireframes to get the layout and structure</p>
         </div>
       </div>
-      <div class="div3">
-        <img src="../images/rubiks-img.jpg" class="div3-img" />
+    </section>
+
+    <!-- Challenges -->
+    <div class="cel-two-col">
+      <div class="cel-two-col-img">
+        <img src="../images/goodbakery-3.png" alt="Celestia challenges screenshot" />
       </div>
-      <div class="div4">
-        <p class="div4-title">Instructions to Run:</p>
-        <ol class="div4-list">
-          <li>Install Docker Desktop and ensure it is running</li>
-          <li>Open Terminal and run: <i>docker login</i></li>
-          <li>run: <i>docker pull madison72/rubiks-cube-app:latest</i></li>
-          <li>run: <i>docker run -it madison72/rubiks-cube-app:latest</i></li>
-        </ol>
+      <div class="cel-two-col-text">
+        <h3 class="cel-heading">Challenges</h3>
+        <p class="cel-para">
+          The biggest challenge was accurately converting spherical astronomical coordinates into Three.js
+          world space. Small rounding errors caused visible misalignment at the edges of the sphere.
+          Performance was another hurdle — rendering thousands of stars at once required instanced geometry
+          and careful draw-call budgeting to keep frame rates smooth on lower-end hardware.
+        </p>
       </div>
     </div>
+
+    <!-- Learned Along the Way -->
+    <section class="cel-section cel-learned cel-centered">
+      <h3 class="cel-heading">Learned Along the Way</h3>
+      <p class="cel-para">
+        This project deepened my understanding of 3D math, coordinate systems, and WebGL-based rendering
+        through Three.js. I also learned how to work with public scientific APIs and parse large datasets
+        efficiently in the browser. Beyond the technical side, designing for a dark, data-heavy interface
+        pushed me to think more carefully about contrast, hierarchy, and how to guide a user's eye without
+        cluttering the screen.
+      </p>
+    </section>
+
+    <!-- Finale -->
+    <div class="cel-finale">
+      <iframe
+        class="cel-final-img"
+        style="border: none; border-radius: 16px;"
+        src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/3RrvOkhPhOfL8OK9yVOy1e/The-Good-Bakery?node-id=0-1"
+        allowfullscreen
+      ></iframe>
+      <a href="#" class="figma-btn" target="_blank">Explore the Site</a>
+      <p>To </p>
+    </div>
+
     <footer>
       <div class="footer-cont">
         <a class="linkedin-btn" href="https://www.linkedin.com/in/madison-davis-07b327238/">
@@ -89,5 +321,4 @@
     </footer>
   </div>
 </body>
-
 </html>
