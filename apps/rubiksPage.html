@@ -166,6 +166,35 @@
       border-radius: 16px;
     }
 
+    /* App gallery */
+    .cel-app-gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 0 60px;
+    }
+
+    .cel-app-gallery img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .cel-app-gallery .gal-long {
+      grid-column: span 2;
+      aspect-ratio: 2 / 1;
+    }
+
+    .cel-app-gallery .gal-square {
+      grid-column: span 1;
+      aspect-ratio: 1 / 1;
+    }
+
     @media (min-width: 1900px) {
       .cel-heading { font-size: 42px; }
       .cel-para { font-size: 19px; }
@@ -190,9 +219,9 @@
     <section class="cel-section cel-centered">
       <h3 class="cel-heading">Mission</h3>
       <p class="cel-para">
-          When I set out to design this app I wanted to create a fun and simple way for children to learn some facts about the planets. 
-          The goal was to have the app be interactive and easy to navigate, no matter the age of the user. I wanted to share my love of astronomy
-          and create a learning tool to facilitate that. 
+        This project was done for my introductory Java class my second year of college. The goal was not to create a fully functional rubiks cube simulator, 
+        instead we were tasked with creating a game where a player input several moves to scramble the cube, and the computer outputs the moves 
+        needed to solve the cube. Players were presented with a list of moves, the simulator solved the cube, and the moves used to solve it were output in order. 
       </p>
     </section>
 
@@ -202,7 +231,7 @@
       <div class="cel-tools">
         <span class="cel-tool">Java</span>
         <span class="cel-tool">Terminal</span>
-        <span class="cel-tool">Lists and Strings</span>
+        <span class="cel-tool">2D Arrays</span>
         <span class="cel-tool">CLI</span>
 
       </div>
@@ -213,19 +242,19 @@
       <h3 class="cel-heading">Key Features</h3>
       <div class="cel-features">
         <div class="cel-feature-col">
-          <i class="fa-solid fa-bread-slice"></i>
+          <i class="fa-solid fa-terminal"></i>
           <h4>Terminal Based</h4>
-          <p>The game is based in the command line, shows the board output each turn, and will block invalid moved. </p>
+          <p>The simulator is fully command line based, with the output and structure catered towards the command line  </p>
         </div>
         <div class="cel-feature-col">
-          <i class="fa-solid fa-rectangle-list"></i>
-          <h4>Two Players</h4>
-          <p>It was built with two users in mind. Each player takes a turn inputting the grid coordinate they want to choose. </p>
+          <i class="fa-solid fa-cube"></i>
+          <h4>Cube Output</h4>
+          <p>After each turn the cube will be printed out, showing where each cell on the cube is</p>
         </div>
         <div class="cel-feature-col">
-          <i class="fa-solid fa-border-all"></i>
-          <h4>Score</h4>
-          <p>The games keeps track of each player's score and displays it each turn. </p>
+          <i class="fa-solid fa-user-check"></i>
+          <h4>Valid Moves</h4>
+          <p>Each possible move is accounted for and coded as valid. Users have full control over what moves to make</p>
         </div>
       </div>
     </section>
@@ -235,8 +264,9 @@
       <div class="cel-two-col-text">
         <h3 class="cel-heading">Solution</h3>
         <p class="cel-para">
-          The web app I created has a minimal design that is both appealing and allows the information to stand out. The design is responsive for all screen sizes, 
-          making it more accessible, and works well on tablets. This was intentional and aimed at being a tool for classrooms. 
+          Eventhough this project was written in Java, it does not take advantage of OOP. It is a very simple program that has one Cube class and several static methods. 
+          The program reads the user input and outputs the opposite move of each, essentially undoing all the moves the user made. Because this was one of my first Java programs 
+          it was not written using best practices and has many areas it could be improved upon. 
         </p>
       </div>
       <div class="cel-two-col-img">
@@ -250,19 +280,19 @@
       <div class="cel-process">
         <div class="cel-process-row">
           <span class="cel-num">1</span>
-          <p>Brainstorm the core concept and research existing astronomy tools to find gaps worth filling</p>
+          <p>Sit down and draw out the cube rotations, moves, and main goal</p>
         </div>
         <div class="cel-process-row">
           <span class="cel-num">3</span>
-          <p>Choose a final design and begin implementing</p>
+          <p>Begin the implementation phase: printing the cube, taking user input, and adding cube rotations </p>
         </div>
         <div class="cel-process-row">
           <span class="cel-num">2</span>
-          <p>Choose a new framework (Ionic) to experiment with</p>
+          <p>Plan out the class and needed methods. </p>
         </div>
         <div class="cel-process-row">
           <span class="cel-num">4</span> 
-          <p>Create several initial wireframes to get the layout and structure</p>
+          <p>Fix any bugs, polish the printed output and test that it has no edge cases</p>
         </div>
       </div>
     </section>
@@ -287,24 +317,27 @@
     <section class="cel-section cel-learned cel-centered">
       <h3 class="cel-heading">Learned Along the Way</h3>
       <p class="cel-para">
-        This project deepened my understanding of 3D math, coordinate systems, and WebGL-based rendering
-        through Three.js. I also learned how to work with public scientific APIs and parse large datasets
-        efficiently in the browser. Beyond the technical side, designing for a dark, data-heavy interface
-        pushed me to think more carefully about contrast, hierarchy, and how to guide a user's eye without
-        cluttering the screen.
+        Because this was one of my first times programming in Java there were a lot of concepts I learned. I got a lot of experience manipulating strings and 2D arrays, 
+        whether it was figuring out the cube rotations or printing out the cube sides. A lot of planning went into this project where I learned how to map out what methods I would need, 
+        where I need to start, what is necessary to test the project, and how to use debugger tools to make my life easier. 
       </p>
     </section>
 
     <!-- Finale -->
     <div class="cel-finale">
-      <iframe
-        class="cel-final-img"
-        style="border: none; border-radius: 16px;"
-        src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/3RrvOkhPhOfL8OK9yVOy1e/The-Good-Bakery?node-id=0-1"
-        allowfullscreen
-      ></iframe>
-      <a href="#" class="figma-btn" target="_blank">Explore the Site</a>
-      <p>To </p>
+      <!-- App Gallery -->
+      <div class="cel-app-gallery">
+        <!-- Row 1: long left, two squares right -->
+        <img class="gal-long" src="../images/go-2.png" alt="SpareChange screenshot 1" />
+        <img class="gal-square" src="../images/go-2.png" alt="SpareChange screenshot 2" />
+        <img class="gal-square" src="../images/go-2.png" alt="SpareChange screenshot 3" />
+        <!-- Row 2: two squares left, long right -->
+        <img class="gal-square" src="../images/go-2.png" alt="SpareChange screenshot 4" />
+        <img class="gal-square" src="../images/go-2.png" alt="SpareChange screenshot 5" />
+        <img class="gal-long" src="../images/go-2.png" alt="SpareChange screenshot 6" />
+      </div>
+      <a href="#" class="figma-btn" target="_blank">Pull to your Machine (directions)</a>
+      <p>To get the simulator on your device follow the link above. Then explore the project and enjoy!</p>
     </div>
 
     <footer>
