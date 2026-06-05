@@ -1157,6 +1157,125 @@ footer {
   }
 }
 
+/* Profile page */
+.profile-sect {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 14vh 40px 80px;
+  gap: 36px;
+  background-color: hsla(0, 0%, 0%, 1);
+  background-image:
+    radial-gradient(at 80% 100%, hsla(266, 65%, 40%, 1) 0px, transparent 50%),
+    radial-gradient(at 2% 100%, rgb(108, 5, 156) 0px, transparent 50%),
+    radial-gradient(at 50% 0%, hsla(278, 66%, 48%, 0.3) 0px, transparent 50%);
+}
+
+.profile-img-wrap {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid rgb(73, 5, 119);
+  box-shadow: 0px 0px 40px 8px rgba(163, 95, 245, 0.5);
+  flex-shrink: 0;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-bio {
+  max-width: 600px;
+  text-align: center;
+  font-size: clamp(15px, 1.5vw, 20px);
+  color: #f7eaff;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.profile-icons { 
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: min(400px, 80vw);
+}
+
+.profile-icon-link {
+  color: #f7eaff;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-icon-link:hover {
+  color: #a35ff5;
+  transform: scale(1.2);
+}
+
+.profile-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  width: min(900px, 90vw);
+}
+
+.profile-card {
+  padding: 28px 24px;
+  border-radius: 24px;
+  background: rgba(134, 127, 134, 0.25);
+  border: 1px solid rgba(134, 127, 134, 0.31);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(11.5px);
+  -webkit-backdrop-filter: blur(11.5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.profile-card-title {
+  background-color: rgb(73, 5, 119);
+  border-radius: 15px;
+  padding: 8px 24px;
+  font-size: clamp(14px, 1.3vw, 18px);
+  color: #f7eaff;
+  white-space: nowrap;
+  text-align: center;
+  align-self: center;
+  box-shadow: 0 0 20px rgba(163, 95, 245, 0.3);
+}
+
+.profile-card-body {
+  font-size: clamp(13px, 1.2vw, 16px);
+  color: #f7eaff;
+  line-height: 1.7;
+  text-align: center;
+  margin: 0;
+}
+
+.profile-card-list {
+  font-size: clamp(13px, 1.2vw, 16px);
+  color: #f7eaff;
+  line-height: 1.7;
+  margin: 0;
+  padding-left: 20px;
+  text-align: left;
+  list-style: disc;
+}
+
+@media (max-width: 600px) {
+  .profile-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Blogs page stuff */
 .header {
   color: white;
