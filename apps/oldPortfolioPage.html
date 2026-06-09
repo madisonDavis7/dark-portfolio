@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Old Portfolio Page</title>
+  <link rel="stylesheet" href="../apps-styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    .cel-section {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 0;
+    }
+
+    .cel-heading {
+      font-size: clamp(22px, 2.5vw, 36px);
+      margin: 0 0 20px 0;
+      color: white;
+    }
+
+    .cel-para {
+      font-size: clamp(14px, 1.4vw, 17px);
+      line-height: 1.85;
+      color: rgba(255, 255, 255, 0.85);
+      margin: 0;
+    }
+
+    .cel-centered {
+      text-align: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Tools */
+    .cel-tools {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .cel-tool {
+      font-size: clamp(13px, 1.2vw, 16px);
+      padding: 6px 20px;
+      border: 1px solid rgba(163, 95, 245, 0.55);
+      border-radius: 20px;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    /* Key Features */
+    .cel-features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .cel-feature-col i {
+      font-size: 2.2rem;
+      color: #a35ff5;
+    }
+
+    .cel-feature-col h4 {
+      font-size: clamp(15px, 1.5vw, 19px);
+      margin: 14px 0 8px;
+      color: white;
+    }
+
+    .cel-feature-col p {
+      font-size: clamp(13px, 1.2vw, 15px);
+      line-height: 1.75;
+      color: rgba(255, 255, 255, 0.8);
+      margin: 0;
+    }
+
+    /* Two-column sections */
+    .cel-two-col {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 50vh;
+    }
+
+    .cel-two-col-text {
+      padding: 60px 6%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+    }
+
+    .cel-two-col-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 80px 40px 20px;
+    }
+
+    .cel-two-col-img img {
+      width: 100%;
+      height: auto;
+      max-height: 280px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .cel-two-col-img:first-child {
+      padding: 40px 20px 40px 80px;
+    }
+
+    /* Process */
+    .cel-process {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px 80px;
+      width: 100%;
+    }
+
+    .cel-process-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .cel-num {
+      font-size: clamp(28px, 3.5vw, 44px);
+      font-weight: bold;
+      color: #a35ff5;
+      line-height: 1;
+      min-width: 36px;
+    }
+
+    .cel-process-row p {
+      font-size: clamp(14px, 1.3vw, 16px);
+      line-height: 1.75;
+      color: rgba(255, 255, 255, 0.85);
+      margin: 6px 0 0;
+      text-align: left;
+    }
+
+    /* Learned */
+    .cel-learned .cel-para {
+      max-width: 800px;
+    }
+
+    /* Finale */
+    .cel-finale {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 36px;
+      padding: 80px 0;
+    }
+
+    .cel-final-img {
+      width: 90%;
+      max-width: 1100px;
+      max-height: 60vh;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
+    @media (min-width: 1900px) {
+      .cel-heading { font-size: 42px; }
+      .cel-para { font-size: 20px;}
+      .cel-tool { font-size: 18px; }
+      .cel-feature-col h4 { font-size: 22px; }
+      .cel-feature-col p { font-size: 20px; }
+      .cel-process-row p { font-size: 20px; }
+      .final-para { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="taskbar-main">
+    <a class="taskbar-left" href="../contact.html">Contact</a>
+    <a class="taskbar-center" href="../index.html">Madison Davis</a>
+    <a class="taskbar-right" href="../profile.html">Bio</a>
+  </div>
+
+  <div class="main-app-sect">
+    <h2 class="app-title">Old Portfolio</h2>
+
+    <!-- Mission -->
+    <section class="cel-section cel-centered">
+      <h3 class="cel-heading">Mission</h3>
+      <p class="cel-para">
+        This was the first portfolio I designed and created. I started off watching a tutorial and following along, but ended up adding my own personal touches 
+        as I got better. I wanted a place to display my skills, showcase my projets, and talk a bit about myself. 
+      </p>
+    </section>
+
+    <!-- Tools and Technology -->
+    <section class="cel-section cel-centered">
+      <h3 class="cel-heading">Tools and Technology</h3>
+      <div class="cel-tools">
+        <span class="cel-tool">GitHub</span>
+        <span class="cel-tool">Visual Studio</span>
+        <span class="cel-tool">JavaScript</span>
+        <span class="cel-tool">HTML / CSS</span>
+      </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="cel-section cel-centered">
+      <h3 class="cel-heading">Key Features</h3>
+      <div class="cel-features">
+        <div class="cel-feature-col">
+          <i class="fa-solid fa-user-astronaut"></i>
+          <h4>Futuristic Theme</h4>
+          <p>The portfolio theme is futuristic pink. It uses neon elements, animation, and color to create the aesthetic. </p>
+        </div>
+        <div class="cel-feature-col">
+          <i class="fa-solid fa-file"></i>
+          <h4>Project Descriptions</h4>
+          <p>Each project has a page with instructions to run it and an overview with mroe details. </p>
+        </div>
+        <div class="cel-feature-col">
+          <i class="fa-solid fa-book-open"></i>
+          <h4>Blog Section</h4>
+          <p>There is a blog section with some insights, stories, and personal experiences.  </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution -->
+    <div class="cel-two-col">
+      <div class="cel-two-col-text">
+        <h3 class="cel-heading">Solution</h3>
+        <p class="cel-para">
+            I wanted my portfolio to be minimal but also reflect my personality. I created different section but made it a single page app for simplicity. 
+            I wanted to start with a small bio to let people learn more about me. Then have a skills section, job portion, and project grid. Because this was 
+            created a couple years ago I didn't have many completed projects to add, and a grid was a modern approach to having them all visible at once. 
+        </p>
+      </div>
+      <div class="cel-two-col-img">
+        <img src="../images/celestia-1.png" alt="Celestia solution screenshot" />
+      </div>
+    </div>
+
+    <!-- Process -->
+    <section class="cel-section cel-centered">
+      <h3 class="cel-heading">Process</h3>
+      <div class="cel-process">
+        <div class="cel-process-row">
+          <span class="cel-num">1</span>
+          <p>Brainstorm colors and theme ideas </p>
+        </div>
+        <div class="cel-process-row">
+          <span class="cel-num">4</span>
+          <p>Add in all the relevant information and check for spelling and grammar </p>
+        </div>
+        <div class="cel-process-row">
+          <span class="cel-num">2</span>
+          <p>Follow along with the tutorial and create the project in VS Code </p>
+        </div>
+        <div class="cel-process-row">
+          <span class="cel-num">3</span> 
+          <p>Make some changes and add personal touches to the project</p>
+        </div>
+      </div>
+    </section>
+    <!-- Challenges -->
+    <div class="cel-two-col">
+      <div class="cel-two-col-img">
+        <img src="../images/celestia-2.png" alt="Celestia challenges screenshot" />
+      </div>
+      <div class="cel-two-col-text">
+        <h3 class="cel-heading">Challenges</h3>
+        <p class="cel-para">
+            This was my first time using more advanced CSS and following a guide in terms of structure, best practices, and adding 
+            animations to a project using only CSS. I had several issues while I was following the tutorial and had to debug why my 
+            screen was not showing the correct outcome. It was also a challenge to make the site responsive and still maintain the same 
+            level of professionalism. Getting the blog section to have cards that were in a carousell structure was difficult because it 
+            was the first time I had implemented something like it. There was a lot of debugging and polishing to make sure it worked smoothly and 
+            did not distort the cards. 
+        </p>
+      </div>
+    </div>
+
+    <!-- Learned Along the Way -->
+    <section class="cel-section cel-learned cel-centered">
+      <h3 class="cel-heading">Learned Along the Way</h3>
+      <p class="final-para">
+        I think through this project I learned a lot about HTML structure itself. I had never used the <section> tag before bit it was very useful for organization. 
+        I also got some experience with css animations and using them in a way that enhances my information and doesn't overwhelm it. 
+      </p>
+    </section>
+
+    <!-- Finale -->
+    <div class="cel-finale">
+      <img src="../images/celestia-3.png" alt="Celestia app preview" class="cel-final-img" />
+      <div class="cel-prototype-lines">
+        <p class="cel-para">
+          This portfolio was created about two years ago and is hosted on GitHub Pages. It is slightly out-dated now, but 
+          feel free to explore using the button below.  
+        </p>
+      </div>
+      <a href="https://madisondavis7.github.io/portfolio/" class="figma-btn" target="_blank">Explore the Portfolio</a>
+    </div>
+
+    <footer>
+      <div class="footer-cont">
+        <a class="linkedin-btn" href="https://www.linkedin.com/in/madison-davis-07b327238/">
+          <i class="fa-brands fa-linkedin fa-2x"></i>
+        </a>
+        <img src="../images/personal-logo.svg" alt="personal logo" class="personal-logo">
+        <p>Designed by Madison Davis</p>
+        <a class="git-btn" href="https://github.com/madisonDavis7">
+          <i class="fa-brands fa-github fa-2x"></i>
+        </a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
